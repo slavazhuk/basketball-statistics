@@ -12,9 +12,9 @@ $LOAD_PATH << '.'
 
 require "selenium-webdriver"
 require "nokogiri" 
-require "constants"
+require "support"
 
-include Constants
+include Support
 
 #
 # webdriver config 
@@ -25,19 +25,14 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["EUROPE: Euroleague"] + "/" + BASE_STANDINGS_URL 
-url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["EUROPE: Euroleague"] + "/" + BASE_RESULTS_URL 
+url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["JAPAN: B.League"] + "/" + BASE_STANDINGS_URL 
+url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["JAPAN: B.League"] + "/" + BASE_RESULTS_URL 
 
 team_list = [] 
 result_list = {} 
 
 locator_team_list_table = "table" 
 locator_result_list_table = "table.basketball" 
-
-av_home_last_5 = 0
-av_home_all_games = 0
-av_guest_last_5 = 0
-av_guest_all_games = 0 
 #
 # <<< variables 
 # 
@@ -70,10 +65,14 @@ team_list.each do |team|
 		                 "home" => [],
 		                 "guest" => [],
 		                 "full" => [],
+		                 "av_home_last_3" => [],
 		                 "av_home_last_5" => [],
 		                 "av_home_all_games" => 0,
+		                 "av_guest_last_3" => [],
 		                 "av_guest_last_5" => [],
-		                 "av_guest_all_games" => 0 
+		                 "av_guest_all_games" => 0, 
+		                 "av_full_last_3" => [],
+		                 "av_full_last_5" => [],		                 
 		                } 
 end 
 
@@ -109,32 +108,6 @@ nokogiri_results.each do |game|
     result_list[guest_team]["full"] << guest_score 
 end 
 
-#
-# >>> functions
-#
-def last_5(input_array) 
-	output_array = []
-	temp_array = input_array
-
-	input_array.each_with_index do |element, index| 
-		avg = 0
-
-		if temp_array.size > 4
-			avg = temp_array[0...5].reduce(:+) / 5.to_f
-		else
-            avg = temp_array.reduce(:+) / temp_array.size.to_f
-		end 
-
-        output_array << avg 
-		temp_array.delete_at(0) 
-	end
-
-	output_array
-end 
-#
-# <<< functions 
-# 
-
 result_list.each_key do |key|
 	puts "\n" + key.to_s
 	
@@ -142,11 +115,29 @@ result_list.each_key do |key|
 	printf("%-10s %s\n", "guest", result_list[key]["guest"])
 	printf("%-10s %s\n", "full", result_list[key]["full"])
 	
-	puts "av_home_last_5" + " " + last_5(Array.new(result_list[key]["home"])).to_s
-	puts "av_home_all_games" + " " + (result_list[key]["home"].reduce(:+) / result_list[key]["home"].size.to_f).to_s
+	# av_home_last_3
+	result_list[key]["av_home_last_3"] = last_3(Array.new(result_list[key]["home"]))
+    puts "av_home_last_3" + " " + result_list[key]["av_home_last_3"].to_s	
+
+    # av_home_last_5
+    result_list[key]["av_home_last_5"] = last_5(Array.new(result_list[key]["home"]))
+	puts "av_home_last_5" + " " + result_list[key]["av_home_last_5"].to_s
+    
+    # av_home_all_games
+    result_list[key]["av_home_all_games"] = result_list[key]["home"].reduce(:+) / result_list[key]["home"].size.to_f
+	puts "av_home_all_games" + " " + result_list[key]["av_home_all_games"].to_s
 	
+	puts "av_guest_last_3" + " " + last_3(Array.new(result_list[key]["guest"])).to_s
 	puts "av_guest_last_5" + " " + last_5(Array.new(result_list[key]["guest"])).to_s
 	puts "av_guest_all_games" + " " + (result_list[key]["guest"].reduce(:+) / result_list[key]["guest"].size.to_f).to_s 
+
+	puts "av_full_last_3" + " " + last_3(Array.new(result_list[key]["full"])).to_s
+	puts "av_full_last_5" + " " + last_5(Array.new(result_list[key]["full"])).to_s 
 end 
 
-driver.quit
+driver.quit 
+
+#
+# sum MIN[av_home_last_3[0], av_home_last_5[0], av_full_last_3[0], av_full_last_5[0]] + MIN[ av_guest_last_3[0], av_guest_last_5[0] , av_full_last_3[0], av_full_last_5[0]]
+# sum MAX[av_home_last_3[0], av_home_last_5[0], av_full_last_3[0], av_full_last_5[0]] + MAX[ av_guest_last_3[0], av_guest_last_5[0] , av_full_last_3[0], av_full_last_5[0]]
+#
