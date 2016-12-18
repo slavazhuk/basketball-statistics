@@ -73,7 +73,7 @@ module Support
 	            avg = temp_array.reduce(:+) / temp_array.size.to_f
 			end 
 
-	        output_array << avg 
+	        output_array << avg.round(2) 
 			temp_array.delete_at(0) 
 		end
 
@@ -93,7 +93,7 @@ module Support
 	            avg = temp_array.reduce(:+) / temp_array.size.to_f
 			end 
 
-	        output_array << avg 
+	        output_array << avg.round(2) 
 			temp_array.delete_at(0) 
 		end
 
