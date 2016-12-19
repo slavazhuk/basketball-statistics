@@ -25,11 +25,13 @@ driver.manage.timeouts.implicit_wait = 60
 # <<< webdriver config 
 # 
 
+
+
 #
 # >>> variables 
 # 
-url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["UNITED KINDOM: BBL"] + "/" + BASE_STANDINGS_URL 
-url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["UNITED KINDOM: BBL"] + "/" + BASE_RESULTS_URL 
+url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["GEORGIA: Superleague"] + "/" + BASE_STANDINGS_URL 
+url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["GEORGIA: Superleague"] + "/" + BASE_RESULTS_URL 
 
 team_list = [] 
 result_list = {} 
@@ -41,9 +43,11 @@ locator_result_list_table = "table.basketball"
 # <<< variables 
 # 
 
-#
-# >>> standings processing
-#
+
+
+###############
+############### >>> standings processing
+###############
 
 # open page 
 driver.get url_standings
@@ -102,6 +106,12 @@ puts next_match_list
 # <<< next matches
 # 
 
+###############
+############### <<< standings processing
+###############
+
+
+
 #
 # >>> results processing 
 # 
@@ -134,6 +144,8 @@ nokogiri_results.each do |game|
     result_list[guest_team]["full"] << guest_score 
 end 
 
+puts result_list
+
 result_list.each_key do |key|
 	puts "\n" + key.to_s
 	
@@ -150,7 +162,7 @@ result_list.each_key do |key|
 	puts "av_home_last_5" + " " + result_list[key]["av_home_last_5"].to_s
     
     # av_home_all_games
-    result_list[key]["av_home_all_games"] = result_list[key]["home"].reduce(:+) / result_list[key]["home"].size.to_f
+    result_list[key]["av_home_all_games"] = result_list[key]["home"].reduce(:+) / result_list[key]["home"].size.to_f if result_list[key]["home"].size > 0
 	puts "av_home_all_games" + " " + result_list[key]["av_home_all_games"].to_s
 	
 	# av_guest_last_3
@@ -162,7 +174,7 @@ result_list.each_key do |key|
 	puts "av_guest_last_5" + " " + result_list[key]["av_guest_last_5"].to_s
 
     # av_guest_all_games
-    result_list[key]["av_guest_all_games"] = result_list[key]["guest"].reduce(:+) / result_list[key]["guest"].size.to_f
+    result_list[key]["av_guest_all_games"] = result_list[key]["guest"].reduce(:+) / result_list[key]["guest"].size.to_f if result_list[key]["guest"].size > 0
 	puts "av_guest_all_games" + " " + result_list[key]["av_guest_all_games"].to_s 
 
     # av_full_last_3
@@ -184,25 +196,46 @@ next_match_list.each do |key1, value1|
 	key   = key1.gsub(/\\/, "")
 	value = value1.gsub(/\\/, "")
 
-	av     = result_list[key]["av_home_last_5"][0] +  result_list[value]["av_guest_last_5"][0]
-	av_rev = result_list[key]["av_guest_last_5"][0] +  result_list[value]["av_home_last_5"][0]
-	left = [result_list[key]["av_home_last_3"][0], 
-	        result_list[key]["av_home_last_5"][0], 
-	        result_list[key]["av_full_last_3"][0], 
-	        result_list[key]["av_full_last_5"][0]].min + [
-	        	                                          result_list[value]["av_guest_last_3"][0], 
-	        	                                          result_list[value]["av_guest_last_5"][0], 
-	        	                                          result_list[value]["av_full_last_3"][0], 
-	        	                                          result_list[value]["av_full_last_5"][0]].min
-	right = [result_list[key]["av_home_last_3"][0], 
-	         result_list[key]["av_home_last_5"][0], 
-	         result_list[key]["av_full_last_3"][0], 
-	         result_list[key]["av_full_last_5"][0]].max + [
-	         	                                           result_list[value]["av_guest_last_3"][0], 
-	         	                                           result_list[value]["av_guest_last_5"][0], 
-	         	                                           result_list[value]["av_full_last_3"][0], 
-	         	                                           result_list[value]["av_full_last_5"][0]].max
-    
+    av = 0
+    av = (av + result_list[key]["av_home_last_5"][0]) if result_list[key]["av_home_last_5"].size > 0
+    av = (av + result_list[value]["av_guest_last_5"][0]) if result_list[value]["av_guest_last_5"].size > 0
+	av_rev = 0
+	av_rev = (av_rev + result_list[key]["av_guest_last_5"][0]) if result_list[key]["av_guest_last_5"].size > 0
+	av_rev = (av_rev + result_list[value]["av_home_last_5"][0]) if result_list[value]["av_home_last_5"].size > 0
+	
+	left_first = []
+    left_first << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
+    left_first << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
+    left_first << result_list[key]["av_full_last_3"][0] if result_list[key]["av_full_last_3"].size > 0
+    left_first << result_list[key]["av_full_last_5"][0] if result_list[key]["av_full_last_5"].size > 0
+
+    left_second = []
+    left_second << result_list[value]["av_guest_last_3"][0] if result_list[value]["av_guest_last_3"].size > 0
+    left_second << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
+    left_second << result_list[value]["av_full_last_3"][0] if result_list[value]["av_full_last_3"].size > 0
+    left_second << result_list[value]["av_full_last_5"][0] if result_list[value]["av_full_last_5"].size > 0
+
+    left = 0.to_f
+    left = (left + left_first.min) if !left_first.min.nil?
+    left = (left + left_second.min) if !left_second.min.nil?
+
+    right_first = []
+    right_first << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
+    right_first << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
+    right_first << result_list[key]["av_full_last_3"][0] if result_list[key]["av_full_last_3"].size > 0
+    right_first << result_list[key]["av_full_last_5"][0] if result_list[key]["av_full_last_5"].size > 0
+
+    right_second = []
+    right_second << result_list[value]["av_guest_last_3"][0] if result_list[value]["av_guest_last_3"].size > 0
+    right_second << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
+    right_second << result_list[value]["av_full_last_3"][0] if result_list[value]["av_full_last_3"].size > 0
+    right_second << result_list[value]["av_full_last_5"][0] if result_list[value]["av_full_last_5"].size > 0
+
+
+    right = 0.to_f
+    right = (right + right_first.max) if !right_first.max.nil?
+    right = (right + right_second.max) if !right_second.max.nil? 
+
     puts key + " - " + value
 	puts "av - " + av.to_s + " (rev - " + av_rev.to_s + ") " + "[" + left.to_s + " - " + right.to_s + "]"
 end
