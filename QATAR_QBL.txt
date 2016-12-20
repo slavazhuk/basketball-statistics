@@ -1,0 +1,144 @@
+{"El Jaish"=>"Al Sadd", "Al Wakrah"=>"Al-Rayyan", "Al Ahli"=>"Al Gharafa", "Al Arabi"=>"Al Wakrah", "Qatar Sports"=>"Al Shamal", "Al Shamal"=>"Al Khor"}
+
+El Jaish
+home       [115]
+guest      [87, 85]
+full       [87, 115, 85]
+av_home_last_3 [115.0]
+av_home_last_5 [115.0]
+av_home_all_games 115.0
+av_guest_last_3 [86.0, 85.0]
+av_guest_last_5 [86.0, 85.0]
+av_guest_all_games 86.0
+av_full_last_3 [95.67, 100.0, 85.0]
+av_full_last_5 [95.67, 100.0, 85.0]
+
+Al-Rayyan
+home       [83, 55, 93]
+guest      [121]
+full       [83, 55, 121, 93]
+av_home_last_3 [77.0, 74.0, 93.0]
+av_home_last_5 [77.0, 74.0, 93.0]
+av_home_all_games 77.0
+av_guest_last_3 [121.0]
+av_guest_last_5 [121.0]
+av_guest_all_games 121.0
+av_full_last_3 [86.33, 89.67, 107.0, 93.0]
+av_full_last_5 [88.0, 89.67, 107.0, 93.0]
+
+Al Gharafa
+home       [78, 90]
+guest      [93]
+full       [78, 93, 90]
+av_home_last_3 [84.0, 90.0]
+av_home_last_5 [84.0, 90.0]
+av_home_all_games 84.0
+av_guest_last_3 [93.0]
+av_guest_last_5 [93.0]
+av_guest_all_games 93.0
+av_full_last_3 [87.0, 91.5, 90.0]
+av_full_last_5 [87.0, 91.5, 90.0]
+
+Al Arabi
+home       [62]
+guest      [83, 66]
+full       [83, 66, 62]
+av_home_last_3 [62.0]
+av_home_last_5 [62.0]
+av_home_all_games 62.0
+av_guest_last_3 [74.5, 66.0]
+av_guest_last_5 [74.5, 66.0]
+av_guest_all_games 74.5
+av_full_last_3 [70.33, 64.0, 62.0]
+av_full_last_5 [70.33, 64.0, 62.0]
+
+Qatar Sports
+home       [92]
+guest      [89, 74]
+full       [89, 92, 74]
+av_home_last_3 [92.0]
+av_home_last_5 [92.0]
+av_home_all_games 92.0
+av_guest_last_3 [81.5, 74.0]
+av_guest_last_5 [81.5, 74.0]
+av_guest_all_games 81.5
+av_full_last_3 [85.0, 83.0, 74.0]
+av_full_last_5 [85.0, 83.0, 74.0]
+
+Al Sadd
+home       [68, 72]
+guest      [69]
+full       [68, 69, 72]
+av_home_last_3 [70.0, 72.0]
+av_home_last_5 [70.0, 72.0]
+av_home_all_games 70.0
+av_guest_last_3 [69.0]
+av_guest_last_5 [69.0]
+av_guest_all_games 69.0
+av_full_last_3 [69.67, 70.5, 72.0]
+av_full_last_5 [69.67, 70.5, 72.0]
+
+Al Shamal
+home       [77]
+guest      [69, 69]
+full       [69, 77, 69]
+av_home_last_3 [77.0]
+av_home_last_5 [77.0]
+av_home_all_games 77.0
+av_guest_last_3 [69.0, 69.0]
+av_guest_last_5 [69.0, 69.0]
+av_guest_all_games 69.0
+av_full_last_3 [71.67, 73.0, 69.0]
+av_full_last_5 [71.67, 73.0, 69.0]
+
+Al Ahli
+home       [55]
+guest      [76, 75]
+full       [76, 55, 75]
+av_home_last_3 [55.0]
+av_home_last_5 [55.0]
+av_home_all_games 55.0
+av_guest_last_3 [75.5, 75.0]
+av_guest_last_5 [75.5, 75.0]
+av_guest_all_games 75.5
+av_full_last_3 [68.67, 65.0, 75.0]
+av_full_last_5 [68.67, 65.0, 75.0]
+
+Al Wakrah
+home       [73, 78]
+guest      [70]
+full       [73, 70, 78]
+av_home_last_3 [75.5, 78.0]
+av_home_last_5 [75.5, 78.0]
+av_home_all_games 75.5
+av_guest_last_3 [70.0]
+av_guest_last_5 [70.0]
+av_guest_all_games 70.0
+av_full_last_3 [73.67, 74.0, 78.0]
+av_full_last_5 [73.67, 74.0, 78.0]
+
+Al Khor
+home       [88, 69]
+guest      [78, 68]
+full       [78, 88, 69, 68]
+av_home_last_3 [78.5, 69.0]
+av_home_last_5 [78.5, 69.0]
+av_home_all_games 78.5
+av_guest_last_3 [73.0, 68.0]
+av_guest_last_5 [73.0, 68.0]
+av_guest_all_games 73.0
+av_full_last_3 [78.33, 75.0, 68.5, 68.0]
+av_full_last_5 [75.75, 75.0, 68.5, 68.0]
+
+El Jaish - Al Sadd
+av - 184.0 (rev - 156.0) [164.67000000000002 - 184.67000000000002]
+Al Wakrah - Al-Rayyan
+av - 196.5 (rev - 147.0) [160.0 - 196.5]
+Al Ahli - Al Gharafa
+av - 148.0 (rev - 159.5) [142.0 - 161.67000000000002]
+Al Arabi - Al Wakrah
+av - 132.0 (rev - 150.0) [132.0 - 144.0]
+Qatar Sports - Al Shamal
+av - 161.0 (rev - 158.5) [154.0 - 163.67000000000002]
+Al Shamal - Al Khor
+av - 150.0 (rev - 147.5) [144.67000000000002 - 155.32999999999998]
