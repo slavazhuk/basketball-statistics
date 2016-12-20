@@ -30,8 +30,9 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["SPAIN: LEB Oro"] + "/" + BASE_STANDINGS_URL 
-url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["SPAIN: LEB Oro"] + "/" + BASE_RESULTS_URL 
+url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["URUGUAY: Liga Capita"] + "/" + BASE_RESULTS_URL 
+url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["URUGUAY: Liga Capita"] + "/" + BASE_STANDINGS_URL 
+#url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["ARGENTINA: Liga A - Second stage"] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
 
 team_list = [] 
 result_list = {} 
@@ -83,6 +84,7 @@ end
 # >>> next matches
 #
 nokogiri_standings.each do |tr|
+	next if tr.at_css(".matches-5 a").nil?
 	next_match = tr.at_css(".matches-5 a")["title"]
 
 	next if !next_match.include?("Next match:")
@@ -143,8 +145,6 @@ nokogiri_results.each do |game|
     result_list[guest_team]["guest"] << guest_score
     result_list[guest_team]["full"] << guest_score 
 end 
-
-puts result_list
 
 result_list.each_key do |key|
 	puts "\n" + key.to_s

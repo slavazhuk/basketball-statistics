@@ -1,5 +1,4 @@
-{"Jurmala"=>"Atyrau", "Barons Kvartals"=>"Atyrau", "Nevezis"=>"Parnu", "Rapla"=>"Liepaja/Triobet", "Jekabpils"=>"Valmiera/ORDO", "Pieno Zvaigzdes"=>"BK Ogre/Kumho Sonora", "TTU KK"=>"Jekabpils", "Rakvere Tarvas"=>"Borisfen"}
-{"Rapla"=>{"home"=>[87, 70, 85, 91], "guest"=>[71, 72, 72, 54], "full"=>[87, 71, 72, 70, 72, 54, 85, 91], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Barons Kvartals"=>{"home"=>[77, 86, 72, 75], "guest"=>[78, 73, 73, 95], "full"=>[77, 86, 78, 73, 73, 72, 95, 75], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Nevezis"=>{"home"=>[94, 92, 71, 84], "guest"=>[68, 94, 77, 77], "full"=>[68, 94, 92, 71, 94, 84, 77, 77], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Liepaja/Triobet"=>{"home"=>[89, 89, 78, 90, 65, 78], "guest"=>[81, 70], "full"=>[89, 89, 78, 90, 65, 78, 81, 70], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Jurmala"=>{"home"=>[61, 60, 76], "guest"=>[89, 64, 56, 65, 72], "full"=>[89, 64, 61, 56, 65, 60, 72, 76], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Parnu"=>{"home"=>[78, 65, 73, 64, 62], "guest"=>[56, 76, 67], "full"=>[78, 65, 56, 73, 76, 64, 67, 62], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Atyrau"=>{"home"=>[], "guest"=>[73, 61, 75, 60], "full"=>[73, 61, 75, 60], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Jekabpils"=>{"home"=>[76, 94, 90, 104, 72], "guest"=>[84, 83, 78, 75], "full"=>[76, 94, 84, 90, 83, 78, 104, 72, 75], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Pieno Zvaigzdes"=>{"home"=>[111, 84, 81, 102, 77], "guest"=>[84, 59, 76], "full"=>[111, 84, 84, 59, 81, 102, 76, 77], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Valmiera/ORDO"=>{"home"=>[82, 60, 58, 59, 85], "guest"=>[105, 71, 82], "full"=>[105, 71, 82, 60, 58, 59, 82, 85], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "BK Ogre/Kumho Sonora"=>{"home"=>[75, 65, 0, 89, 77, 75], "guest"=>[71, 83, 101], "full"=>[71, 75, 65, 0, 89, 83, 77, 101, 75], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "TTU KK"=>{"home"=>[93, 97, 71, 62], "guest"=>[75, 87, 74, 55], "full"=>[93, 75, 87, 97, 71, 74, 62, 55], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Rakvere Tarvas"=>{"home"=>[74, 87, 82, 62, 79], "guest"=>[78, 20, 54, 52], "full"=>[74, 78, 20, 87, 82, 54, 62, 79, 52], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}, "Borisfen"=>{"home"=>[], "guest"=>[45, 46, 51, 52, 60, 46, 60, 59, 68], "full"=>[45, 46, 51, 52, 60, 46, 60, 59, 68], "av_home_last_3"=>[], "av_home_last_5"=>[], "av_home_all_games"=>0, "av_guest_last_3"=>[], "av_guest_last_5"=>[], "av_guest_all_games"=>0, "av_full_last_3"=>[], "av_full_last_5"=>[]}}
+{"Jurmala"=>"Rapla", "Barons Kvartals"=>"Atyrau", "Nevezis"=>"Parnu", "Rapla"=>"Liepaja/Triobet", "Jekabpils"=>"Valmiera/ORDO", "Pieno Zvaigzdes"=>"BK Ogre/Kumho Sonora", "TTU KK"=>"Jekabpils", "Rakvere Tarvas"=>"Borisfen"}
 
 Rapla
 home       [87, 70, 85, 91]
@@ -40,6 +39,19 @@ av_guest_all_games 79.0
 av_full_last_3 [84.67, 85.67, 85.67, 83.0, 85.0, 79.33, 77.0, 77.0]
 av_full_last_5 [83.8, 87.0, 83.6, 80.6, 83.0, 79.33, 77.0, 77.0]
 
+Jurmala
+home       [96, 61, 60, 76]
+guest      [89, 64, 56, 65, 72]
+full       [96, 89, 64, 61, 56, 65, 60, 72, 76]
+av_home_last_3 [72.33, 65.67, 68.0, 76.0]
+av_home_last_5 [73.25, 65.67, 68.0, 76.0]
+av_home_all_games 73.25
+av_guest_last_3 [69.67, 61.67, 64.33, 68.5, 72.0]
+av_guest_last_5 [69.2, 64.25, 64.33, 68.5, 72.0]
+av_guest_all_games 69.2
+av_full_last_3 [83.0, 71.33, 60.33, 60.67, 60.33, 65.67, 69.33, 74.0, 76.0]
+av_full_last_5 [73.2, 67.0, 61.2, 62.8, 65.8, 68.25, 69.33, 74.0, 76.0]
+
 Liepaja/Triobet
 home       [89, 89, 78, 90, 65, 78]
 guest      [81, 70]
@@ -52,19 +64,6 @@ av_guest_last_5 [75.5, 70.0]
 av_guest_all_games 75.5
 av_full_last_3 [85.33, 85.67, 77.67, 77.67, 74.67, 76.33, 75.5, 70.0]
 av_full_last_5 [82.2, 80.0, 78.4, 76.8, 73.5, 76.33, 75.5, 70.0]
-
-Jurmala
-home       [61, 60, 76]
-guest      [89, 64, 56, 65, 72]
-full       [89, 64, 61, 56, 65, 60, 72, 76]
-av_home_last_3 [65.67, 68.0, 76.0]
-av_home_last_5 [65.67, 68.0, 76.0]
-av_home_all_games 65.66666666666667
-av_guest_last_3 [69.67, 61.67, 64.33, 68.5, 72.0]
-av_guest_last_5 [69.2, 64.25, 64.33, 68.5, 72.0]
-av_guest_all_games 69.2
-av_full_last_3 [71.33, 60.33, 60.67, 60.33, 65.67, 69.33, 74.0, 76.0]
-av_full_last_5 [67.0, 61.2, 62.8, 65.8, 68.25, 69.33, 74.0, 76.0]
 
 Parnu
 home       [78, 65, 73, 64, 62]
@@ -81,16 +80,16 @@ av_full_last_5 [69.6, 66.8, 67.2, 68.4, 67.25, 64.33, 64.5, 62.0]
 
 Atyrau
 home       []
-guest      [73, 61, 75, 60]
-full       [73, 61, 75, 60]
+guest      [63, 73, 61, 75, 60]
+full       [63, 73, 61, 75, 60]
 av_home_last_3 []
 av_home_last_5 []
 av_home_all_games 0
-av_guest_last_3 [69.67, 65.33, 67.5, 60.0]
-av_guest_last_5 [67.25, 65.33, 67.5, 60.0]
-av_guest_all_games 67.25
-av_full_last_3 [69.67, 65.33, 67.5, 60.0]
-av_full_last_5 [67.25, 65.33, 67.5, 60.0]
+av_guest_last_3 [65.67, 69.67, 65.33, 67.5, 60.0]
+av_guest_last_5 [66.4, 67.25, 65.33, 67.5, 60.0]
+av_guest_all_games 66.4
+av_full_last_3 [65.67, 69.67, 65.33, 67.5, 60.0]
+av_full_last_5 [66.4, 67.25, 65.33, 67.5, 60.0]
 
 Jekabpils
 home       [76, 94, 90, 104, 72]
@@ -183,10 +182,10 @@ av_guest_all_games 54.111111111111114
 av_full_last_3 [47.33, 49.67, 54.33, 52.67, 55.33, 55.0, 62.33, 63.5, 68.0]
 av_full_last_5 [50.8, 51.0, 53.8, 55.4, 58.6, 58.25, 62.33, 63.5, 68.0]
 
-Jurmala - Atyrau
-av - 132.92000000000002 (rev - 69.2) [132.92000000000002 - 141.0]
+Jurmala - Rapla
+av - 140.5 (rev - 152.45) [139.57999999999998 - 159.67000000000002]
 Barons Kvartals - Atyrau
-av - 144.75 (rev - 79.75) [144.65 - 150.0]
+av - 143.9 (rev - 79.75) [143.07 - 146.73000000000002]
 Nevezis - Parnu
 av - 151.57999999999998 (rev - 147.4) [150.13 - 155.26999999999998]
 Rapla - Liepaja/Triobet

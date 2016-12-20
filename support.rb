@@ -15,8 +15,10 @@ module Support
 		                 "CZECH REPUBLIC: NBL" => "czech-republic/nbl", 
 		                 "EUROPE: Euroleague" => "europe/euroleague",
 		                 "EUROPE: Baltic League" => "europe/baltic-league",
+		                 "EUROPE: Champions League" => "europe/champions-league",
 		                 "GEORGIA: Superleague" => "georgia/superleague",
 		                 "FRANCE: LNB" => "france/lnb",
+		                 "FRANCE: Pro B" => "france/pro-b",
 		                 "FINLAND: Korisliiga" => "finland/korisliiga",
 		                 "FYR OF MACEDONIA: Superleague" => "fyr-of-macedonia/superleague",
 		                 "GERMANY: BBL" => "germany/bbl",
@@ -24,6 +26,7 @@ module Support
 		                 "JAPAN: B.League" => "japan/b-league",
 		                 "ITALY: Lega A" => "italy/lega-a",
 		                 "LITHUANIA: LKL" => "lithuania/lkl",
+		                 "LITHUANIA: NKL" => "lithuania/nkl",
 		                 "MEXICO: LNBP" => "mexico/lnbp",
 		                 "NORWAY: BLNO" => "norway/blno",
 		                 "POLAND: Tauron Basket Liga" => "poland/tauron-basket-liga",
@@ -32,9 +35,12 @@ module Support
 		                 "SPAIN: LEB Oro" => "spain/leb-oro",
 		                 "SOUTH KOREA: KBL" => "south-korea/kbl",
 		                 "SLOVENIA: Liga Nova KBM" => "slovenia/liga-nova-kbm",
+		                 "SWEDEN: Ligan" => "sweden/ligan",
 		                 "ROMANIA: Divizia A" => "romania/divizia-a",
 		                 "TURKEY: Super Ligi" => "turkey/super-ligi",
-		                 "UNITED KINDOM: BBL" => "united-kingdom/bbl"
+		                 "UNITED KINDOM: BBL" => "united-kingdom/bbl",
+		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
+		                 "USA: NBA" => "usa/nba"
 		                }	
     BASE_PINNACLE_LEAGUES_LIST = {
     	                          "AUSTRALIA: NBL" => "australia/nbl",
