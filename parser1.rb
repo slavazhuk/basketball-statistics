@@ -30,8 +30,8 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["SOUTH KOREA: KBL"] + "/" + BASE_RESULTS_URL 
-url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["SOUTH KOREA: KBL"] + "/" + BASE_STANDINGS_URL 
+url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["EUROPE: Champions League"] + "/" + BASE_RESULTS_URL 
+url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["EUROPE: Champions League"] + "/" + BASE_STANDINGS_URL 
 #url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["ARGENTINA: Liga A - Second stage"] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
 
 team_list = [] 

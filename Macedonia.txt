@@ -1,0 +1,114 @@
+{"Feni Industries"=>"Rabotnicki", "Kumanovo"=>"Strumica", "Pelister"=>"Kozuv", "Ohrid"=>"Vardar"}
+
+Rabotnicki
+home       [90, 81, 92, 89]
+guest      [71, 85]
+full       [90, 71, 81, 92, 85, 89]
+av_home_last_3 [87.67, 87.33, 90.5, 89.0]
+av_home_last_5 [88.0, 87.33, 90.5, 89.0]
+av_home_all_games 88.0
+av_guest_last_3 [78.0, 85.0]
+av_guest_last_5 [78.0, 85.0]
+av_guest_all_games 78.0
+av_full_last_3 [80.67, 81.33, 86.0, 88.67, 87.0, 89.0]
+av_full_last_5 [83.8, 83.6, 86.75, 88.67, 87.0, 89.0]
+
+Feni Industries
+home       [72, 100]
+guest      [71, 59, 83, 66]
+full       [71, 72, 59, 83, 100, 66]
+av_home_last_3 [86.0, 100.0]
+av_home_last_5 [86.0, 100.0]
+av_home_all_games 86.0
+av_guest_last_3 [71.0, 69.33, 74.5, 66.0]
+av_guest_last_5 [69.75, 69.33, 74.5, 66.0]
+av_guest_all_games 69.75
+av_full_last_3 [67.33, 71.33, 80.67, 83.0, 83.0, 66.0]
+av_full_last_5 [77.0, 76.0, 77.0, 83.0, 83.0, 66.0]
+
+Kumanovo
+home       [82, 89]
+guest      [92, 64, 96, 52]
+full       [92, 64, 82, 96, 89, 52]
+av_home_last_3 [85.5, 89.0]
+av_home_last_5 [85.5, 89.0]
+av_home_all_games 85.5
+av_guest_last_3 [84.0, 70.67, 74.0, 52.0]
+av_guest_last_5 [76.0, 70.67, 74.0, 52.0]
+av_guest_all_games 76.0
+av_full_last_3 [79.33, 80.67, 89.0, 79.0, 70.5, 52.0]
+av_full_last_5 [84.6, 76.6, 79.75, 79.0, 70.5, 52.0]
+
+Kozuv
+home       [66, 73, 84, 63]
+guest      [80, 86]
+full       [66, 73, 80, 84, 86, 63]
+av_home_last_3 [74.33, 73.33, 73.5, 63.0]
+av_home_last_5 [71.5, 73.33, 73.5, 63.0]
+av_home_all_games 71.5
+av_guest_last_3 [83.0, 86.0]
+av_guest_last_5 [83.0, 86.0]
+av_guest_all_games 83.0
+av_full_last_3 [73.0, 79.0, 83.33, 77.67, 74.5, 63.0]
+av_full_last_5 [77.8, 77.2, 78.25, 77.67, 74.5, 63.0]
+
+Pelister
+home       [71, 60]
+guest      [53, 67, 77, 61]
+full       [53, 71, 67, 60, 77, 61]
+av_home_last_3 [65.5, 60.0]
+av_home_last_5 [65.5, 60.0]
+av_home_all_games 65.5
+av_guest_last_3 [65.67, 68.33, 69.0, 61.0]
+av_guest_last_5 [64.5, 68.33, 69.0, 61.0]
+av_guest_all_games 64.5
+av_full_last_3 [63.67, 66.0, 68.0, 66.0, 69.0, 61.0]
+av_full_last_5 [65.6, 67.2, 66.25, 66.0, 69.0, 61.0]
+
+Strumica
+home       [62, 74, 68, 64]
+guest      [67, 65]
+full       [62, 67, 74, 65, 68, 64]
+av_home_last_3 [68.0, 68.67, 66.0, 64.0]
+av_home_last_5 [67.0, 68.67, 66.0, 64.0]
+av_home_all_games 67.0
+av_guest_last_3 [66.0, 65.0]
+av_guest_last_5 [66.0, 65.0]
+av_guest_all_games 66.0
+av_full_last_3 [67.67, 68.67, 69.0, 65.67, 66.0, 64.0]
+av_full_last_5 [67.2, 67.6, 67.75, 65.67, 66.0, 64.0]
+
+Ohrid
+home       [53, 66, 73]
+guest      [60, 68, 64]
+full       [60, 53, 68, 66, 64, 73]
+av_home_last_3 [64.0, 69.5, 73.0]
+av_home_last_5 [64.0, 69.5, 73.0]
+av_home_all_games 64.0
+av_guest_last_3 [64.0, 66.0, 64.0]
+av_guest_last_5 [64.0, 66.0, 64.0]
+av_guest_all_games 64.0
+av_full_last_3 [60.33, 62.33, 66.0, 67.67, 68.5, 73.0]
+av_full_last_5 [62.2, 64.8, 67.75, 67.67, 68.5, 73.0]
+
+Vardar
+home       [67, 54, 71]
+guest      [49, 65, 57]
+full       [67, 49, 54, 65, 71, 57]
+av_home_last_3 [64.0, 62.5, 71.0]
+av_home_last_5 [64.0, 62.5, 71.0]
+av_home_all_games 64.0
+av_guest_last_3 [57.0, 61.0, 57.0]
+av_guest_last_5 [57.0, 61.0, 57.0]
+av_guest_all_games 57.0
+av_full_last_3 [56.67, 56.0, 63.33, 64.33, 64.0, 57.0]
+av_full_last_5 [61.2, 59.2, 61.75, 64.33, 64.0, 57.0]
+
+Feni Industries - Rabotnicki
+av - 164.0 (rev - 157.75) [145.32999999999998 - 169.8]
+Kumanovo - Strumica
+av - 151.5 (rev - 143.0) [145.32999999999998 - 153.17000000000002]
+Pelister - Kozuv
+av - 148.5 (rev - 136.0) [136.67000000000002 - 148.6]
+Ohrid - Vardar
+av - 121.0 (rev - 128.0) [117.0 - 125.2]
