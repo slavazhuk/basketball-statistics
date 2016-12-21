@@ -9,6 +9,7 @@ module Support
 		                 "BELGIUM: Scooore League" => "belgium/scooore-league",
 		                 "BRAZIL: NBB" => "brazil/nbb",
 		                 "BULGARIA: NBL" => "bulgaria/nbl",
+		                 "BOSNIA AND HERZEGOVINA: Prvenstvo BiH" => "bosnia-and-herzegovina/prvenstvo-bih",
 		                 "CHILE: LNB" => "chile/lnb",
 		                 "CHINA: CBA" => "china/cba",
 		                 "CROATIA: A1 Liga" => "croatia/a1-liga",
@@ -31,6 +32,7 @@ module Support
 		                 "NORWAY: BLNO" => "norway/blno",
 		                 "POLAND: Tauron Basket Liga" => "poland/tauron-basket-liga",
 		                 "PORTUGAL: LPB" => "portugal/lpb",
+		                 "PHILIPPINES: Philippine Cup" => "philippines/philippine-cup"
 		                 "QATAR: QBL" => "qatar/qbl",
 		                 "ROMANIA: Divizia A" => "romania/divizia-a",
 		                 "SPAIN: ACB" => "spain/acb",
@@ -39,7 +41,7 @@ module Support
 		                 "SLOVENIA: Liga Nova KBM" => "slovenia/liga-nova-kbm",
 		                 "SWEDEN: Ligan" => "sweden/ligan",
 		                 "TURKEY: Super Ligi" => "turkey/super-ligi",
-		                 "UNITED KINDOM: BBL" => "united-kingdom/bbl",
+		                 "UNITED KINGDOM: BBL" => "united-kingdom/bbl",
 		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
 		                 "USA: NBA" => "usa/nba"
 		                }	

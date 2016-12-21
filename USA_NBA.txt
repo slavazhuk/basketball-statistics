@@ -1,4 +1,4 @@
-{"Golden State Warriors"=>"Utah Jazz", "Houston Rockets"=>"San Antonio Spurs", "Los Angeles Clippers"=>"Denver Nuggets", "Memphis Grizzlies"=>"Boston Celtics", "Oklahoma City Thunder"=>"Atlanta Hawks", "Sacramento Kings"=>"Portland Trail Blazers", "Denver Nuggets"=>"Dallas Mavericks", "Charlotte Hornets"=>"Los Angeles Lakers", "Philadelphia 76ers"=>"New Orleans Pelicans", "Minnesota Timberwolves"=>"Phoenix Suns", "Milwaukee Bucks"=>"Cleveland Cavaliers", "Toronto Raptors"=>"Brooklyn Nets", "New York Knicks"=>"Indiana Pacers", "Chicago Bulls"=>"Detroit Pistons", "Indiana Pacers"=>"Washington Wizards", "Miami Heat"=>"Orlando Magic"}
+{"Golden State Warriors"=>"Utah Jazz", "Houston Rockets"=>"San Antonio Spurs", "Los Angeles Clippers"=>"Denver Nuggets", "Memphis Grizzlies"=>"Boston Celtics", "New Orleans Pelicans"=>"Oklahoma City Thunder", "Sacramento Kings"=>"Portland Trail Blazers", "Charlotte Hornets"=>"Los Angeles Lakers", "Philadelphia 76ers"=>"New Orleans Pelicans", "Atlanta Hawks"=>"Minnesota Timberwolves", "Phoenix Suns"=>"Houston Rockets", "Portland Trail Blazers"=>"Dallas Mavericks", "Milwaukee Bucks"=>"Cleveland Cavaliers", "Toronto Raptors"=>"Brooklyn Nets", "Chicago Bulls"=>"Washington Wizards", "New York Knicks"=>"Indiana Pacers", "Detroit Pistons"=>"Memphis Grizzlies", "Miami Heat"=>"Orlando Magic"}
 
 Golden State Warriors
 home       [135, 103, 142]
@@ -40,17 +40,17 @@ av_full_last_3 [116.33, 125.33, 121.0, 111.0, 115.0, 114.33, 120.5, 107.0]
 av_full_last_5 [116.0, 117.4, 119.8, 114.8, 113.0, 114.33, 120.5, 107.0]
 
 Los Angeles Clippers
-home       [121, 133, 98, 102]
+home       [121, 133, 98]
 guest      [110, 102, 113]
-full       [110, 102, 113, 121, 133, 98, 102]
-av_home_last_3 [117.33, 111.0, 100.0, 102.0]
-av_home_last_5 [113.5, 111.0, 100.0, 102.0]
-av_home_all_games 113.5
+full       [110, 102, 113, 121, 133, 98]
+av_home_last_3 [117.33, 115.5, 98.0]
+av_home_last_5 [117.33, 115.5, 98.0]
+av_home_all_games 117.33333333333333
 av_guest_last_3 [108.33, 107.5, 113.0]
 av_guest_last_5 [108.33, 107.5, 113.0]
 av_guest_all_games 108.33333333333333
-av_full_last_3 [108.33, 112.0, 122.33, 117.33, 111.0, 100.0, 102.0]
-av_full_last_5 [115.8, 113.4, 113.4, 113.5, 111.0, 100.0, 102.0]
+av_full_last_3 [108.33, 112.0, 122.33, 117.33, 115.5, 98.0]
+av_full_last_5 [115.8, 113.4, 116.25, 117.33, 115.5, 98.0]
 
 Utah Jazz
 home       [103, 109, 104, 99, 112]
@@ -79,17 +79,17 @@ av_full_last_3 [86.0, 90.33, 96.33, 94.67, 98.0, 92.67, 95.0, 94.0]
 av_full_last_5 [90.8, 93.8, 94.6, 94.8, 97.0, 92.67, 95.0, 94.0]
 
 Oklahoma City Thunder
-home       [114, 99, 99, 101]
+home       [108, 114, 99, 99]
 guest      [89, 95, 102]
-full       [114, 89, 95, 99, 99, 102, 101]
-av_home_last_3 [104.0, 99.67, 100.0, 101.0]
-av_home_last_5 [103.25, 99.67, 100.0, 101.0]
-av_home_all_games 103.25
+full       [108, 114, 89, 95, 99, 99, 102]
+av_home_last_3 [107.0, 104.0, 99.0, 99.0]
+av_home_last_5 [105.0, 104.0, 99.0, 99.0]
+av_home_all_games 105.0
 av_guest_last_3 [95.33, 98.5, 102.0]
 av_guest_last_5 [95.33, 98.5, 102.0]
 av_guest_all_games 95.33333333333333
-av_full_last_3 [99.33, 94.33, 97.67, 100.0, 100.67, 101.5, 101.0]
-av_full_last_5 [99.2, 96.8, 99.2, 100.25, 100.67, 101.5, 101.0]
+av_full_last_3 [103.67, 99.33, 94.33, 97.67, 100.0, 100.5, 102.0]
+av_full_last_5 [101.0, 99.2, 96.8, 98.75, 100.0, 100.5, 102.0]
 
 Portland Trail Blazers
 home       [114]
@@ -105,30 +105,30 @@ av_full_last_3 [108.0, 118.0, 115.0, 105.67, 101.33, 101.67, 109.5, 112.0]
 av_full_last_5 [111.0, 110.2, 107.6, 107.2, 104.0, 101.67, 109.5, 112.0]
 
 Denver Nuggets
-home       [127, 132]
+home       [117, 127, 132]
 guest      [92, 121, 85, 111, 106]
-full       [127, 132, 92, 121, 85, 111, 106]
-av_home_last_3 [129.5, 132.0]
-av_home_last_5 [129.5, 132.0]
-av_home_all_games 129.5
+full       [117, 127, 132, 92, 121, 85, 111, 106]
+av_home_last_3 [125.33, 129.5, 132.0]
+av_home_last_5 [125.33, 129.5, 132.0]
+av_home_all_games 125.33333333333333
 av_guest_last_3 [99.33, 105.67, 100.67, 108.5, 106.0]
 av_guest_last_5 [103.0, 105.75, 100.67, 108.5, 106.0]
 av_guest_all_games 103.0
-av_full_last_3 [117.0, 115.0, 99.33, 105.67, 100.67, 108.5, 106.0]
-av_full_last_5 [111.4, 108.2, 103.0, 105.75, 100.67, 108.5, 106.0]
+av_full_last_3 [125.33, 117.0, 115.0, 99.33, 105.67, 100.67, 108.5, 106.0]
+av_full_last_5 [117.8, 111.4, 108.2, 103.0, 105.75, 100.67, 108.5, 106.0]
 
 Sacramento Kings
 home       [116, 100]
-guest      [79, 96, 98, 84, 120, 98]
-full       [79, 96, 98, 116, 84, 100, 120, 98]
+guest      [79, 96, 98, 84, 120]
+full       [79, 96, 98, 116, 84, 100, 120]
 av_home_last_3 [108.0, 100.0]
 av_home_last_5 [108.0, 100.0]
 av_home_all_games 108.0
-av_guest_last_3 [91.0, 92.67, 100.67, 100.67, 109.0, 98.0]
-av_guest_last_5 [95.4, 99.2, 100.0, 100.67, 109.0, 98.0]
-av_guest_all_games 95.83333333333333
-av_full_last_3 [91.0, 103.33, 99.33, 100.0, 101.33, 106.0, 109.0, 98.0]
-av_full_last_5 [94.6, 98.8, 103.6, 103.6, 100.5, 106.0, 109.0, 98.0]
+av_guest_last_3 [91.0, 92.67, 100.67, 102.0, 120.0]
+av_guest_last_5 [95.4, 99.5, 100.67, 102.0, 120.0]
+av_guest_all_games 95.4
+av_full_last_3 [91.0, 103.33, 99.33, 100.0, 101.33, 110.0, 120.0]
+av_full_last_5 [94.6, 98.8, 103.6, 105.0, 101.33, 110.0, 120.0]
 
 Los Angeles Lakers
 home       [112, 115, 101]
@@ -145,55 +145,55 @@ av_full_last_5 [101.8, 103.2, 102.2, 103.0, 105.75, 103.67, 98.0, 101.0]
 
 New Orleans Pelicans
 home       [102, 109, 88, 94]
-guest      [100, 100, 110, 105, 92]
-full       [100, 100, 102, 109, 110, 105, 88, 94, 92]
+guest      [100, 100, 110, 105]
+full       [100, 100, 102, 109, 110, 105, 88, 94]
 av_home_last_3 [99.67, 97.0, 91.0, 94.0]
 av_home_last_5 [98.25, 97.0, 91.0, 94.0]
 av_home_all_games 98.25
-av_guest_last_3 [103.33, 105.0, 102.33, 98.5, 92.0]
-av_guest_last_5 [101.4, 101.75, 102.33, 98.5, 92.0]
-av_guest_all_games 101.4
-av_full_last_3 [100.67, 103.67, 107.0, 108.0, 101.0, 95.67, 91.33, 93.0, 92.0]
-av_full_last_5 [104.2, 105.2, 102.8, 101.2, 97.8, 94.75, 91.33, 93.0, 92.0]
-
-Phoenix Suns
-home       [92, 101, 110, 94]
-guest      [101, 119, 105]
-full       [101, 92, 101, 110, 119, 94, 105]
-av_home_last_3 [101.0, 101.67, 102.0, 94.0]
-av_home_last_5 [99.25, 101.67, 102.0, 94.0]
-av_home_all_games 99.25
-av_guest_last_3 [108.33, 112.0, 105.0]
-av_guest_last_5 [108.33, 112.0, 105.0]
-av_guest_all_games 108.33333333333333
-av_full_last_3 [98.0, 101.0, 110.0, 107.67, 106.0, 99.5, 105.0]
-av_full_last_5 [104.6, 103.2, 105.8, 107.0, 106.0, 99.5, 105.0]
+av_guest_last_3 [103.33, 105.0, 107.5, 105.0]
+av_guest_last_5 [103.75, 105.0, 107.5, 105.0]
+av_guest_all_games 103.75
+av_full_last_3 [100.67, 103.67, 107.0, 108.0, 101.0, 95.67, 91.0, 94.0]
+av_full_last_5 [104.2, 105.2, 102.8, 101.2, 99.25, 95.67, 91.0, 94.0]
 
 Minnesota Timberwolves
-home       [95, 108, 90, 91]
+home       [115, 95, 108, 90, 91]
 guest      [99, 110]
-full       [95, 99, 108, 90, 110, 91]
-av_home_last_3 [97.67, 96.33, 90.5, 91.0]
-av_home_last_5 [96.0, 96.33, 90.5, 91.0]
-av_home_all_games 96.0
+full       [115, 95, 99, 108, 90, 110, 91]
+av_home_last_3 [106.0, 97.67, 96.33, 90.5, 91.0]
+av_home_last_5 [99.8, 96.0, 96.33, 90.5, 91.0]
+av_home_all_games 99.8
 av_guest_last_3 [104.5, 110.0]
 av_guest_last_5 [104.5, 110.0]
 av_guest_all_games 104.5
-av_full_last_3 [100.67, 99.0, 102.67, 97.0, 100.5, 91.0]
-av_full_last_5 [100.4, 99.6, 99.75, 97.0, 100.5, 91.0]
+av_full_last_3 [103.0, 100.67, 99.0, 102.67, 97.0, 100.5, 91.0]
+av_full_last_5 [101.4, 100.4, 99.6, 99.75, 97.0, 100.5, 91.0]
+
+Phoenix Suns
+home       [92, 101, 110, 94]
+guest      [108, 101, 119, 105]
+full       [108, 101, 92, 101, 110, 119, 94, 105]
+av_home_last_3 [101.0, 101.67, 102.0, 94.0]
+av_home_last_5 [99.25, 101.67, 102.0, 94.0]
+av_home_all_games 99.25
+av_guest_last_3 [109.33, 108.33, 112.0, 105.0]
+av_guest_last_5 [108.25, 108.33, 112.0, 105.0]
+av_guest_all_games 108.25
+av_full_last_3 [100.33, 98.0, 101.0, 110.0, 107.67, 106.0, 99.5, 105.0]
+av_full_last_5 [102.4, 104.6, 103.2, 105.8, 107.0, 106.0, 99.5, 105.0]
 
 Dallas Mavericks
 home       [99, 85, 112, 111, 89, 101]
-guest      [100, 87]
-full       [99, 100, 85, 112, 87, 111, 89, 101]
+guest      [107, 100, 87]
+full       [107, 99, 100, 85, 112, 87, 111, 89, 101]
 av_home_last_3 [98.67, 102.67, 104.0, 100.33, 95.0, 101.0]
 av_home_last_5 [99.2, 99.6, 103.25, 100.33, 95.0, 101.0]
 av_home_all_games 99.5
-av_guest_last_3 [93.5, 87.0]
-av_guest_last_5 [93.5, 87.0]
-av_guest_all_games 93.5
-av_full_last_3 [94.67, 99.0, 94.67, 103.33, 95.67, 100.33, 95.0, 101.0]
-av_full_last_5 [96.6, 99.0, 96.8, 100.0, 97.0, 100.33, 95.0, 101.0]
+av_guest_last_3 [98.0, 93.5, 87.0]
+av_guest_last_5 [98.0, 93.5, 87.0]
+av_guest_all_games 98.0
+av_full_last_3 [102.0, 94.67, 99.0, 94.67, 103.33, 95.67, 100.33, 95.0, 101.0]
+av_full_last_5 [100.6, 96.6, 99.0, 96.8, 100.0, 97.0, 100.33, 95.0, 101.0]
 
 Cleveland Cavaliers
 home       [119, 103, 116, 114]
@@ -260,96 +260,96 @@ av_guest_all_games 100.0
 av_full_last_3 [101.0, 104.33, 105.0, 110.0, 107.0, 105.5, 96.0]
 av_full_last_5 [103.6, 107.6, 105.2, 106.5, 107.0, 105.5, 96.0]
 
-New York Knicks
-home       [94, 106]
-guest      [114, 90, 101, 118, 103, 114]
-full       [114, 90, 101, 118, 103, 94, 114, 106]
-av_home_last_3 [100.0, 106.0]
-av_home_last_5 [100.0, 106.0]
-av_home_all_games 100.0
-av_guest_last_3 [101.67, 103.0, 107.33, 111.67, 108.5, 114.0]
-av_guest_last_5 [105.2, 105.2, 109.0, 111.67, 108.5, 114.0]
-av_guest_all_games 106.66666666666667
-av_full_last_3 [101.67, 103.0, 107.33, 105.0, 103.67, 104.67, 110.0, 106.0]
-av_full_last_5 [105.2, 101.2, 106.0, 107.0, 104.25, 104.67, 110.0, 106.0]
-
 Chicago Bulls
-home       [69, 94, 105, 95, 110]
+home       [113, 69, 94, 105, 95, 110]
 guest      [97, 91]
-full       [69, 97, 94, 105, 95, 91, 110]
-av_home_last_3 [89.33, 98.0, 103.33, 102.5, 110.0]
-av_home_last_5 [94.6, 101.0, 103.33, 102.5, 110.0]
-av_home_all_games 94.6
+full       [113, 69, 97, 94, 105, 95, 91, 110]
+av_home_last_3 [92.0, 89.33, 98.0, 103.33, 102.5, 110.0]
+av_home_last_5 [95.2, 94.6, 101.0, 103.33, 102.5, 110.0]
+av_home_all_games 97.66666666666667
 av_guest_last_3 [94.0, 91.0]
 av_guest_last_5 [94.0, 91.0]
 av_guest_all_games 94.0
-av_full_last_3 [86.67, 98.67, 98.0, 97.0, 98.67, 100.5, 110.0]
-av_full_last_5 [92.0, 96.4, 99.0, 100.25, 98.67, 100.5, 110.0]
+av_full_last_3 [93.0, 86.67, 98.67, 98.0, 97.0, 98.67, 100.5, 110.0]
+av_full_last_5 [95.6, 92.0, 96.4, 99.0, 100.25, 98.67, 100.5, 110.0]
+
+New York Knicks
+home       [94]
+guest      [114, 90, 101, 118, 103, 114]
+full       [114, 90, 101, 118, 103, 94, 114]
+av_home_last_3 [94.0]
+av_home_last_5 [94.0]
+av_home_all_games 94.0
+av_guest_last_3 [101.67, 103.0, 107.33, 111.67, 108.5, 114.0]
+av_guest_last_5 [105.2, 105.2, 109.0, 111.67, 108.5, 114.0]
+av_guest_all_games 106.66666666666667
+av_full_last_3 [101.67, 103.0, 107.33, 105.0, 103.67, 104.0, 114.0]
+av_full_last_5 [105.2, 101.2, 106.0, 107.25, 103.67, 104.0, 114.0]
 
 Indiana Pacers
-home       [110, 118]
-guest      [105, 95, 89, 103, 109, 106, 111]
-full       [105, 95, 89, 110, 118, 103, 109, 106, 111]
-av_home_last_3 [114.0, 118.0]
-av_home_last_5 [114.0, 118.0]
-av_home_all_games 114.0
-av_guest_last_3 [96.33, 95.67, 100.33, 106.0, 108.67, 108.5, 111.0]
-av_guest_last_5 [100.2, 100.4, 103.6, 107.25, 108.67, 108.5, 111.0]
-av_guest_all_games 102.57142857142857
-av_full_last_3 [96.33, 98.0, 105.67, 110.33, 110.0, 106.0, 108.67, 108.5, 111.0]
-av_full_last_5 [103.4, 103.0, 105.8, 109.2, 109.4, 107.25, 108.67, 108.5, 111.0]
-
-Detroit Pistons
-home       [90, 79, 102, 92]
-guest      [108, 95, 117, 77]
-full       [90, 108, 95, 79, 117, 77, 102, 92]
-av_home_last_3 [90.33, 91.0, 97.0, 92.0]
-av_home_last_5 [90.75, 91.0, 97.0, 92.0]
-av_home_all_games 90.75
-av_guest_last_3 [106.67, 96.33, 97.0, 77.0]
-av_guest_last_5 [99.25, 96.33, 97.0, 77.0]
-av_guest_all_games 99.25
-av_full_last_3 [97.67, 94.0, 97.0, 91.0, 98.67, 90.33, 97.0, 92.0]
-av_full_last_5 [97.8, 95.2, 94.0, 93.4, 97.0, 90.33, 97.0, 92.0]
+home       [107, 110, 118]
+guest      [105, 95, 89, 103, 109, 106]
+full       [107, 105, 95, 89, 110, 118, 103, 109, 106]
+av_home_last_3 [111.67, 114.0, 118.0]
+av_home_last_5 [111.67, 114.0, 118.0]
+av_home_all_games 111.66666666666667
+av_guest_last_3 [96.33, 95.67, 100.33, 106.0, 107.5, 106.0]
+av_guest_last_5 [100.2, 100.4, 101.75, 106.0, 107.5, 106.0]
+av_guest_all_games 101.16666666666667
+av_full_last_3 [102.33, 96.33, 98.0, 105.67, 110.33, 110.0, 106.0, 107.5, 106.0]
+av_full_last_5 [101.2, 103.4, 103.0, 105.8, 109.2, 109.0, 106.0, 107.5, 106.0]
 
 Atlanta Hawks
 home       [99, 120, 103, 99]
-guest      [125, 114]
-full       [99, 125, 120, 114, 103, 99]
+guest      [110, 125, 114]
+full       [110, 99, 125, 120, 114, 103, 99]
 av_home_last_3 [107.33, 107.33, 101.0, 99.0]
 av_home_last_5 [105.25, 107.33, 101.0, 99.0]
 av_home_all_games 105.25
-av_guest_last_3 [119.5, 114.0]
-av_guest_last_5 [119.5, 114.0]
-av_guest_all_games 119.5
-av_full_last_3 [114.67, 119.67, 112.33, 105.33, 101.0, 99.0]
-av_full_last_5 [112.2, 112.2, 109.0, 105.33, 101.0, 99.0]
+av_guest_last_3 [116.33, 119.5, 114.0]
+av_guest_last_5 [116.33, 119.5, 114.0]
+av_guest_all_games 116.33333333333333
+av_full_last_3 [111.33, 114.67, 119.67, 112.33, 105.33, 101.0, 99.0]
+av_full_last_5 [113.6, 112.2, 112.2, 109.0, 105.33, 101.0, 99.0]
+
+Detroit Pistons
+home       [90, 79, 102]
+guest      [82, 108, 95, 117, 77]
+full       [82, 90, 108, 95, 79, 117, 77, 102]
+av_home_last_3 [90.33, 90.5, 102.0]
+av_home_last_5 [90.33, 90.5, 102.0]
+av_home_all_games 90.33333333333333
+av_guest_last_3 [95.0, 106.67, 96.33, 97.0, 77.0]
+av_guest_last_5 [95.8, 99.25, 96.33, 97.0, 77.0]
+av_guest_all_games 95.8
+av_full_last_3 [93.33, 97.67, 94.0, 97.0, 91.0, 98.67, 89.5, 102.0]
+av_full_last_5 [90.8, 97.8, 95.2, 94.0, 93.75, 98.67, 89.5, 102.0]
 
 Washington Wizards
 home       [117, 122, 109, 110, 92, 116]
-guest      [101, 118]
-full       [117, 122, 109, 101, 110, 92, 116, 118]
+guest      [105, 101, 118]
+full       [105, 117, 122, 109, 101, 110, 92, 116, 118]
 av_home_last_3 [116.0, 113.67, 103.67, 106.0, 104.0, 116.0]
 av_home_last_5 [110.0, 109.8, 106.75, 106.0, 104.0, 116.0]
 av_home_all_games 111.0
-av_guest_last_3 [109.5, 118.0]
-av_guest_last_5 [109.5, 118.0]
-av_guest_all_games 109.5
-av_full_last_3 [116.0, 110.67, 106.67, 101.0, 106.0, 108.67, 117.0, 118.0]
-av_full_last_5 [111.8, 106.8, 105.6, 107.4, 109.0, 108.67, 117.0, 118.0]
+av_guest_last_3 [108.0, 109.5, 118.0]
+av_guest_last_5 [108.0, 109.5, 118.0]
+av_guest_all_games 108.0
+av_full_last_3 [114.67, 116.0, 110.67, 106.67, 101.0, 106.0, 108.67, 117.0, 118.0]
+av_full_last_5 [110.8, 111.8, 106.8, 105.6, 107.4, 109.0, 108.67, 117.0, 118.0]
 
 Orlando Magic
 home       [79, 118, 108, 113, 87]
-guest      [131, 88, 124, 98]
-full       [79, 118, 108, 131, 113, 88, 87, 124, 98]
+guest      [131, 88, 124]
+full       [79, 118, 108, 131, 113, 88, 87, 124]
 av_home_last_3 [101.67, 113.0, 102.67, 100.0, 87.0]
 av_home_last_5 [101.0, 106.5, 102.67, 100.0, 87.0]
 av_home_all_games 101.0
-av_guest_last_3 [114.33, 103.33, 111.0, 98.0]
-av_guest_last_5 [110.25, 103.33, 111.0, 98.0]
-av_guest_all_games 110.25
-av_full_last_3 [101.67, 119.0, 117.33, 110.67, 96.0, 99.67, 103.0, 111.0, 98.0]
-av_full_last_5 [109.8, 111.6, 105.4, 108.6, 102.0, 99.25, 103.0, 111.0, 98.0]
+av_guest_last_3 [114.33, 106.0, 124.0]
+av_guest_last_5 [114.33, 106.0, 124.0]
+av_guest_all_games 114.33333333333333
+av_full_last_3 [101.67, 119.0, 117.33, 110.67, 96.0, 99.67, 105.5, 124.0]
+av_full_last_5 [109.8, 111.6, 105.4, 108.6, 103.0, 99.67, 105.5, 124.0]
 
 Miami Heat
 home       [95, 98, 95, 112, 103]
@@ -395,30 +395,32 @@ av - 221.17000000000002 (rev - 213.2) [205.7 - 226.07]
 Houston Rockets - San Antonio Spurs
 av - 223.8 (rev - 215.5) [216.0 - 235.13]
 Los Angeles Clippers - Denver Nuggets
-av - 216.5 (rev - 237.82999999999998) [207.66 - 234.32999999999998]
+av - 220.32999999999998 (rev - 233.66) [207.66 - 242.66]
 Memphis Grizzlies - Boston Celtics
 av - 196.2 (rev - 185.0) [184.4 - 196.2]
-Oklahoma City Thunder - Atlanta Hawks
-av - 222.75 (rev - 200.57999999999998) [211.4 - 223.5]
+New Orleans Pelicans - Oklahoma City Thunder
+av - 193.57999999999998 (rev - 208.75) [193.57999999999998 - 207.87]
 Sacramento Kings - Portland Trail Blazers
 av - 213.4 (rev - 209.4) [196.4 - 219.0]
-Denver Nuggets - Dallas Mavericks
-av - 223.0 (rev - 202.2) [204.9 - 226.1]
 Charlotte Hornets - Los Angeles Lakers
 av - 196.4 (rev - 209.32999999999998) [196.4 - 202.13]
 Philadelphia 76ers - New Orleans Pelicans
-av - 203.65 (rev - 193.92000000000002) [202.07 - 207.87]
-Minnesota Timberwolves - Phoenix Suns
-av - 204.32999999999998 (rev - 203.75) [194.0 - 209.0]
+av - 206.0 (rev - 193.92000000000002) [202.07 - 207.87]
+Atlanta Hawks - Minnesota Timberwolves
+av - 209.75 (rev - 216.13) [206.65 - 218.1]
+Phoenix Suns - Houston Rockets
+av - 197.75 (rev - 232.05) [197.75 - 218.73000000000002]
+Portland Trail Blazers - Dallas Mavericks
+av - 212.0 (rev - 204.60000000000002) [206.0 - 216.0]
 Milwaukee Bucks - Cleveland Cavaliers
 av - 216.25 (rev - 213.0) [203.32999999999998 - 220.0]
 Toronto Raptors - Brooklyn Nets
 av - 229.0 (rev - 223.0) [223.53 - 234.32999999999998]
+Chicago Bulls - Washington Wizards
+av - 203.2 (rev - 204.0) [200.0 - 210.26999999999998]
 New York Knicks - Indiana Pacers
-av - 200.2 (rev - 219.2) [196.32999999999998 - 208.60000000000002]
-Chicago Bulls - Detroit Pistons
-av - 193.85 (rev - 184.75) [184.34 - 201.26999999999998]
-Indiana Pacers - Washington Wizards
-av - 223.5 (rev - 210.2) [205.82999999999998 - 230.0]
+av - 194.2 (rev - 216.87) [190.32999999999998 - 207.53]
+Detroit Pistons - Memphis Grizzlies
+av - 180.32999999999998 (rev - 187.0) [176.32999999999998 - 184.13]
 Miami Heat - Orlando Magic
-av - 210.85 (rev - 194.0) [197.67000000000002 - 214.93]
+av - 214.93 (rev - 194.0) [197.67000000000002 - 214.93]
