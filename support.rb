@@ -26,6 +26,7 @@ module Support
 		                 "FYR OF MACEDONIA: Superleague" => "fyr-of-macedonia/superleague",
 		                 "GEORGIA: Superleague" => "georgia/superleague",
 		                 "GERMANY: BBL" => "germany/bbl",
+		                 "GERMANY: Pro A" => "germany/pro-a",
 		                 "GREECE: Basket League" => "greece/basket-league",
 		                 "HUNGARY: NB I. A" => "hungary/nb-i-a",
 		                 "ITALY: Lega A" => "italy/lega-a",
