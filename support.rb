@@ -13,7 +13,8 @@ module Support
 		                 "CHILE: LNB" => "chile/lnb",
 		                 "CHINA: CBA" => "china/cba",
 		                 "CROATIA: A1 Liga" => "croatia/a1-liga",
-		                 "CZECH REPUBLIC: NBL" => "czech-republic/nbl", 
+		                 "CZECH REPUBLIC: NBL" => "czech-republic/nbl",
+		                 "DENMARK: Basketligaen" => "denmark/basketligaen", 
 		                 "EUROPE: Euroleague" => "europe/euroleague",
 		                 "EUROPE: Baltic League" => "europe/baltic-league",
 		                 "EUROPE: BIBL" => "europe/bibl",
@@ -119,6 +120,58 @@ module Support
 
 		output_array
 	end 
+
+	def dispersion_coefficient(input_array)
+		avg = 0
+		sum = 0
+		array_size = 0
+		dispersion_coefficient = 0
+		temp_array = Array.new(input_array)
+
+		if temp_array.size > 4
+			array_size = 5
+			avg = temp_array[0...5].reduce(:+) / 5.to_f
+		else
+			array_size = temp_array.size
+			avg = temp_array.reduce(:+) / temp_array.size.to_f
+		end
+
+		temp_array.each_with_index do |element, index|
+			break if index == 5
+
+			sum = sum + (element - avg).abs
+		end
+
+		dispersion_coefficient = (sum / avg) / array_size
+
+		return dispersion_coefficient.round(6)
+	end
+
+	def dispersion_value(input_array)
+		avg = 0
+		sum = 0
+		array_size = 0
+		dispersion_value = 0
+		temp_array = Array.new(input_array)
+
+		if temp_array.size > 4
+			array_size = 5
+			avg = temp_array[0...5].reduce(:+) / 5.to_f
+		else
+			array_size = temp_array.size
+			avg = temp_array.reduce(:+) / temp_array.size.to_f
+		end
+
+		temp_array.each_with_index do |element, index|
+			break if index == 5
+
+			sum = sum + (element - avg).abs
+		end
+
+		dispersion_value = sum / array_size
+
+		return dispersion_value
+	end	
 #
 # <<< functions 
 # 
