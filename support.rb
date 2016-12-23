@@ -30,6 +30,8 @@ module Support
 		                 "GREECE: Basket League" => "greece/basket-league",
 		                 "HUNGARY: NB I. A" => "hungary/nb-i-a",
 		                 "ITALY: Lega A" => "italy/lega-a",
+		                 "ITALY: A2 West" => "italy/a2-west",
+		                 "ITALY: A2 East" => "italy/a2-east",
 		                 "JAPAN: B.League" => "japan/b-league",
 		                 "LATVIA: LBL" => "latvia/lbl",
 		                 "LITHUANIA: LKL" => "lithuania/lkl",
@@ -48,6 +50,7 @@ module Support
 		                 "SLOVENIA: Liga Nova KBM" => "slovenia/liga-nova-kbm",
 		                 "SWEDEN: Ligan" => "sweden/ligan",
 		                 "TURKEY: Super Ligi" => "turkey/super-ligi",
+		                 "UKRAINE: FBU Superleague" => "ukraine/fbu-superleague",
 		                 "UNITED KINGDOM: BBL" => "united-kingdom/bbl",
 		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
 		                 "USA: NBA" => "usa/nba"
