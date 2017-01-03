@@ -30,8 +30,8 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["SWEDEN: Ligan"] + "/" + BASE_RESULTS_URL 
-url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["SWEDEN: Ligan"] + "/" + BASE_STANDINGS_URL 
+url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["ITALY: A2 East"] + "/" + BASE_RESULTS_URL 
+url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["ITALY: A2 East"] + "/" + BASE_STANDINGS_URL 
 #url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["ARGENTINA: Liga A - Second stage"] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
 
 team_list = [] 
@@ -210,8 +210,6 @@ next_match_list.each do |key1, value1|
 	av_rev = 0
 	av_rev = (av_rev + result_list[key]["av_guest_last_5"][0]) if result_list[key]["av_guest_last_5"].size > 0
 	av_rev = (av_rev + result_list[value]["av_home_last_5"][0]) if result_list[value]["av_home_last_5"].size > 0
-	
-
 
 	left_first = []
     left_first << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
