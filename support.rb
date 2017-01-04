@@ -22,6 +22,7 @@ module Support
 		                 "EUROPE: BIBL" => "europe/bibl",
 		                 "EUROPE: Champions League" => "europe/champions-league",
 		                 "EUROPE: VTB United League" => "europe/vtb-united-league",
+		                 "EUROPE: Eurocup - Top 16" => "europe/eurocup",
 		                 "ESTONIA: Korvpalli Meistriliiga" => "estonia/korvpalli-meistriliiga",
 		                 "FRANCE: LNB" => "france/lnb",
 		                 "FRANCE: Pro B" => "france/pro-b",
