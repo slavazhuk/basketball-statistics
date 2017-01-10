@@ -30,13 +30,17 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["UNITED KINGDOM: BBL"] + "/" + BASE_RESULTS_URL 
-url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["UNITED KINGDOM: BBL"] + "/" + BASE_STANDINGS_URL 
-#url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["ARGENTINA: Liga A - Second stage"] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
+league = "SOUTH KOREA: KBL"
+url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_RESULTS_URL 
+url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_STANDINGS_URL 
+#url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
 #url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["EUROPE: Eurocup - Top 16"] + "/" + "standings/?t=SG9OmZS7&ts=fXdaMJr3"
 
+# list of all teams for this league
 team_list = [] 
+# all finished games
 result_list = {} 
+# next matches
 next_match_list = {}
 
 locator_team_list_table = "table" 
@@ -67,9 +71,9 @@ end
 
 team_list.each do |team|
 	result_list[team] = { 
-		                 "home" => [],
-		                 "guest" => [],
-		                 "full" => [],
+		                 "home_scored" => [],
+                         "guest_scored" => [],
+                         "full" => [],
 		                 "av_home_last_3" => [],
 		                 "av_home_last_5" => [],
 		                 "av_home_all_games" => 0,
@@ -81,7 +85,11 @@ team_list.each do |team|
 		                 "dispersion_coefficient_home" => 0,
 		                 "dispersion_coefficient_guest" => 0,
 		                 "dispersion_value_home" => 0,
-		                 "dispersion_value_guest" => 0
+		                 "dispersion_value_guest" => 0,
+                         "home_missed" => [],
+                         "guest_missed" => [],
+                         "av_home_missed_last_5" => [],
+                         "av_guest_missed_last_5" => []                         
 		                } 
 end 
 
@@ -145,45 +153,49 @@ nokogiri_results.each do |game|
     home_score = score_raw_processed[0, index_colon - 1].strip.to_i
     guest_score = score_raw_processed[(index_colon+2)..-1].strip.to_i
 
-    result_list[home_team]["home"] << home_score
+    result_list[home_team]["home_scored"] << home_score
+    result_list[home_team]["home_missed"] << guest_score
     result_list[home_team]["full"] << home_score
-    result_list[guest_team]["guest"] << guest_score
+    result_list[guest_team]["guest_scored"] << guest_score
+    result_list[guest_team]["guest_missed"] << home_score
     result_list[guest_team]["full"] << guest_score 
 end 
 
 result_list.each_key do |key|
 	puts "\n" + key.to_s
 	
-	printf("%-10s %s\n", "home", result_list[key]["home"])
-	printf("%-10s %s\n", "guest", result_list[key]["guest"])
+	printf("%-10s %s\n", "home_scored", result_list[key]["home_scored"])
+	printf("%-10s %s\n", "guest_scored", result_list[key]["guest_scored"])
 	printf("%-10s %s\n", "full", result_list[key]["full"])
+    printf("%-10s %s\n", "home_missed", result_list[key]["home_missed"])
+    printf("%-10s %s\n", "guest_missed", result_list[key]["guest_missed"])    
 	
 	# av_home_last_3
-	result_list[key]["av_home_last_3"] = last_3(Array.new(result_list[key]["home"]))
+	result_list[key]["av_home_last_3"] = last_3(Array.new(result_list[key]["home_scored"]))
     puts "av_home_last_3" + " " + result_list[key]["av_home_last_3"].to_s	
 
     # av_home_last_5
-    result_list[key]["av_home_last_5"] = last_5(Array.new(result_list[key]["home"]))
+    result_list[key]["av_home_last_5"] = last_5(Array.new(result_list[key]["home_scored"]))
 	puts "av_home_last_5" + " " + result_list[key]["av_home_last_5"].to_s
-	result_list[key]["dispersion_coefficient_home"] = dispersion_coefficient(Array.new(result_list[key]["home"]))
-	result_list[key]["dispersion_value_home"] = dispersion_value(Array.new(result_list[key]["home"]))
+	result_list[key]["dispersion_coefficient_home"] = dispersion_coefficient(Array.new(result_list[key]["home_scored"]))
+	result_list[key]["dispersion_value_home"] = dispersion_value(Array.new(result_list[key]["home_scored"]))
     
     # av_home_all_games
-    result_list[key]["av_home_all_games"] = (result_list[key]["home"].reduce(:+) / result_list[key]["home"].size.to_f).round(2) if result_list[key]["home"].size > 0
+    result_list[key]["av_home_all_games"] = (result_list[key]["home_scored"].reduce(:+) / result_list[key]["home_scored"].size.to_f).round(2) if result_list[key]["home_scored"].size > 0
 	puts "av_home_all_games" + " " + result_list[key]["av_home_all_games"].to_s
 	
 	# av_guest_last_3
-	result_list[key]["av_guest_last_3"] = last_3(Array.new(result_list[key]["guest"]))
+	result_list[key]["av_guest_last_3"] = last_3(Array.new(result_list[key]["guest_scored"]))
 	puts "av_guest_last_3" + " " + result_list[key]["av_guest_last_3"].to_s
 
     # av_guest_last_5 
-    result_list[key]["av_guest_last_5"] = last_5(Array.new(result_list[key]["guest"]))
+    result_list[key]["av_guest_last_5"] = last_5(Array.new(result_list[key]["guest_scored"]))
 	puts "av_guest_last_5" + " " + result_list[key]["av_guest_last_5"].to_s
-	result_list[key]["dispersion_coefficient_guest"] = dispersion_coefficient(Array.new(result_list[key]["guest"]))
-	result_list[key]["dispersion_value_guest"] = dispersion_value(Array.new(result_list[key]["guest"]))	
+	result_list[key]["dispersion_coefficient_guest"] = dispersion_coefficient(Array.new(result_list[key]["guest_scored"]))
+	result_list[key]["dispersion_value_guest"] = dispersion_value(Array.new(result_list[key]["guest_scored"]))	
 
     # av_guest_all_games
-    result_list[key]["av_guest_all_games"] = (result_list[key]["guest"].reduce(:+) / result_list[key]["guest"].size.to_f).round(2) if result_list[key]["guest"].size > 0
+    result_list[key]["av_guest_all_games"] = (result_list[key]["guest_scored"].reduce(:+) / result_list[key]["guest_scored"].size.to_f).round(2) if result_list[key]["guest_scored"].size > 0
 	puts "av_guest_all_games" + " " + result_list[key]["av_guest_all_games"].to_s 
 
     # av_full_last_3
@@ -193,6 +205,14 @@ result_list.each_key do |key|
 	# av_full_last_5
 	result_list[key]["av_full_last_5"] = last_5(Array.new(result_list[key]["full"]))
 	puts "av_full_last_5" + " " + result_list[key]["av_full_last_5"].to_s 
+
+    # av_home_missed_last_5
+    result_list[key]["av_home_missed_last_5"] = last_5(Array.new(result_list[key]["home_missed"]))
+    puts "av_home_missed_last_5" + " " + result_list[key]["av_home_missed_last_5"].to_s   
+
+    # av_guest_missed_last_5
+    result_list[key]["av_guest_missed_last_5"] = last_5(Array.new(result_list[key]["guest_missed"]))
+    puts "av_guest_missed_last_5" + " " + result_list[key]["av_guest_missed_last_5"].to_s        
 end 
 #
 # <<< results processing 
@@ -208,45 +228,101 @@ next_match_list.each do |key1, value1|
     av = 0
     av = (av + result_list[key]["av_home_last_5"][0]) if result_list[key]["av_home_last_5"].size > 0
     av = (av + result_list[value]["av_guest_last_5"][0]) if result_list[value]["av_guest_last_5"].size > 0
+    av = av.round(2)
 	av_rev = 0
 	av_rev = (av_rev + result_list[key]["av_guest_last_5"][0]) if result_list[key]["av_guest_last_5"].size > 0
 	av_rev = (av_rev + result_list[value]["av_home_last_5"][0]) if result_list[value]["av_home_last_5"].size > 0
+    av_rev - av_rev.round(2)
 
-	left_first = []
-    left_first << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
-    left_first << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
-    left_first << result_list[key]["av_full_last_3"][0] if result_list[key]["av_full_last_3"].size > 0
-    left_first << result_list[key]["av_full_last_5"][0] if result_list[key]["av_full_last_5"].size > 0
+	a1_outer = [] 
+	a1_outer << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
+	a1_outer << result_list[key]["av_home_last_3"][1] if result_list[key]["av_home_last_3"].size > 1
+    a1_outer << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
+    a1_outer << result_list[key]["av_home_last_5"][1] if result_list[key]["av_home_last_5"].size > 1
+    a1_outer << result_list[key]["av_full_last_3"][0] if result_list[key]["av_full_last_3"].size > 0
+    a1_outer << result_list[key]["av_full_last_3"][1] if result_list[key]["av_full_last_3"].size > 1
+    a1_outer << result_list[key]["av_full_last_5"][0] if result_list[key]["av_full_last_5"].size > 0
+    a1_outer << result_list[key]["av_full_last_5"][1] if result_list[key]["av_full_last_5"].size > 1
 
-    left_second = []
-    left_second << result_list[value]["av_guest_last_3"][0] if result_list[value]["av_guest_last_3"].size > 0
-    left_second << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
-    left_second << result_list[value]["av_full_last_3"][0] if result_list[value]["av_full_last_3"].size > 0
-    left_second << result_list[value]["av_full_last_5"][0] if result_list[value]["av_full_last_5"].size > 0
+    a2_outer = []
+    a2_outer << result_list[value]["av_guest_last_3"][0] if result_list[value]["av_guest_last_3"].size > 0
+    a2_outer << result_list[value]["av_guest_last_3"][1] if result_list[value]["av_guest_last_3"].size > 1
+    a2_outer << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
+    a2_outer << result_list[value]["av_guest_last_5"][1] if result_list[value]["av_guest_last_5"].size > 1
+    a2_outer << result_list[value]["av_full_last_3"][0] if result_list[value]["av_full_last_3"].size > 0
+    a2_outer << result_list[value]["av_full_last_3"][1] if result_list[value]["av_full_last_3"].size > 1
+    a2_outer << result_list[value]["av_full_last_5"][0] if result_list[value]["av_full_last_5"].size > 0
+    a2_outer << result_list[value]["av_full_last_5"][1] if result_list[value]["av_full_last_5"].size > 1
 
-    left = 0.to_f
-    left = (left + left_first.min) if !left_first.min.nil?
-    left = (left + left_second.min) if !left_second.min.nil?
+	a1_inner = [] 
+	a1_inner << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
+    a1_inner << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
+    a1_inner << result_list[key]["av_full_last_3"][0] if result_list[key]["av_full_last_3"].size > 0
+    a1_inner << result_list[key]["av_full_last_5"][0] if result_list[key]["av_full_last_5"].size > 0
 
-    right_first = []
-    right_first << result_list[key]["av_home_last_3"][0] if result_list[key]["av_home_last_3"].size > 0
-    right_first << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
-    right_first << result_list[key]["av_full_last_3"][0] if result_list[key]["av_full_last_3"].size > 0
-    right_first << result_list[key]["av_full_last_5"][0] if result_list[key]["av_full_last_5"].size > 0
+    a2_inner = []
+    a2_inner << result_list[value]["av_guest_last_3"][0] if result_list[value]["av_guest_last_3"].size > 0
+    a2_inner << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
+    a2_inner << result_list[value]["av_full_last_3"][0] if result_list[value]["av_full_last_3"].size > 0
+    a2_inner << result_list[value]["av_full_last_5"][0] if result_list[value]["av_full_last_5"].size > 0
 
-    right_second = []
-    right_second << result_list[value]["av_guest_last_3"][0] if result_list[value]["av_guest_last_3"].size > 0
-    right_second << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
-    right_second << result_list[value]["av_full_last_3"][0] if result_list[value]["av_full_last_3"].size > 0
-    right_second << result_list[value]["av_full_last_5"][0] if result_list[value]["av_full_last_5"].size > 0
+    left_outer = 0.to_f
+    left_outer = (left_outer + a1_outer.min) if !a1_outer.min.nil?
+    left_outer = (left_outer + a2_outer.min) if !a2_outer.min.nil?
+    left_outer = left_outer.round(2)
 
+    left_inner = 0.to_f
+    left_inner = (left_inner + a1_inner.min) if !a1_inner.min.nil?
+    left_inner = (left_inner + a2_inner.min) if !a2_inner.min.nil?
+    left_inner = left_inner.round(2)
 
-    right = 0.to_f
-    right = (right + right_first.max) if !right_first.max.nil?
-    right = (right + right_second.max) if !right_second.max.nil? 
+    right_inner = 0.to_f
+    right_inner = (right_inner + a1_inner.max) if !a1_inner.max.nil?
+    right_inner = (right_inner + a2_inner.max) if !a2_inner.max.nil?
+    right_inner = right_inner.round(2)
 
+    right_outer = 0.to_f
+    right_outer = (right_outer + a1_outer.max) if !a1_outer.max.nil?
+    right_outer = (right_outer + a2_outer.max) if !a2_outer.max.nil? 
+    right_outer = right_outer.round(2)    
+
+    h_scored = 0
+    h_scored = result_list[key]["av_home_last_5"][0] if !result_list[key]["av_home_last_5"][0].nil?
+    h_missed = 0
+    h_missed = result_list[key]["av_home_missed_last_5"][0] if !result_list[key]["av_home_missed_last_5"][0].nil?
+    g_scored = 0
+    g_scored = result_list[value]["av_guest_last_5"][0] if !result_list[value]["av_guest_last_5"][0].nil?
+    g_missed = 0
+    g_missed = result_list[value]["av_guest_missed_last_5"][0] if !result_list[value]["av_guest_missed_last_5"][0].nil?
+
+    home_scored_missed = []
+    home_scored_missed << result_list[key]["av_home_last_5"][0] if result_list[key]["av_home_last_5"].size > 0
+    home_scored_missed << result_list[value]["av_guest_missed_last_5"][0] if result_list[value]["av_guest_missed_last_5"].size > 0
+    guest_scored_missed = []
+    guest_scored_missed << result_list[value]["av_guest_last_5"][0] if result_list[value]["av_guest_last_5"].size > 0
+    guest_scored_missed << result_list[key]["av_home_missed_last_5"][0] if result_list[key]["av_home_missed_last_5"].size > 0
+
+    scored_missed_min = 0.to_f
+    scored_missed_min = (scored_missed_min + home_scored_missed.min) if !home_scored_missed.min.nil?
+    scored_missed_min = (scored_missed_min + guest_scored_missed.min) if !guest_scored_missed.min.nil?
+    scored_missed_min = scored_missed_min.round(2)
+
+    scored_missed_max = 0.to_f
+    scored_missed_max = (scored_missed_max + home_scored_missed.max) if !home_scored_missed.max.nil?
+    scored_missed_max = (scored_missed_max + guest_scored_missed.max) if !guest_scored_missed.max.nil?
+    scored_missed_max = scored_missed_max.round(2)
+
+    puts "\n"
     puts key + " - " + value
-	puts "av - " + av.to_s + " (rev - " + av_rev.to_s + ") " + "[" + left.to_s + " - " + right.to_s + "]" + " | dispersion - [" + result_list[key]["dispersion_coefficient_home"].to_s + " - " + result_list[value]["dispersion_coefficient_guest"].to_s + "] | [" + (av - result_list[key]["dispersion_value_home"]*3/4 - result_list[value]["dispersion_value_guest"]*3/4).to_s + " - " + (av + result_list[key]["dispersion_value_home"]*3/4 + result_list[value]["dispersion_value_guest"]*3/4).to_s + "]"
+	puts "av - " + av.to_s + " (rev - " + av_rev.to_s + ")" 
+
+    puts "+" + h_scored.to_s + " -" + h_missed.to_s
+    puts "-" + g_missed.to_s + " +" + g_scored.to_s
+    puts "[" + scored_missed_min.to_s + " - " + scored_missed_max.to_s + "]"
+
+    puts "[" + left_outer.to_s + ";" + left_inner.to_s + " - " + right_inner.to_s + ";" + right_outer.to_s + "]" 
+    puts "dispersion - [" + result_list[key]["dispersion_coefficient_home"].to_s + " - " + result_list[value]["dispersion_coefficient_guest"].to_s + "]"
+    puts "[" + (av - result_list[key]["dispersion_value_home"]*3/4 - result_list[value]["dispersion_value_guest"]*3/4).to_s + " - " + (av + result_list[key]["dispersion_value_home"]*3/4 + result_list[value]["dispersion_value_guest"]*3/4).to_s + "]"
 end
 
 driver.quit 
