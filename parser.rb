@@ -30,7 +30,7 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-league = "SOUTH KOREA: KBL"
+league = "ITALY: A2 West"
 url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_RESULTS_URL 
 url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_STANDINGS_URL 
 #url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
