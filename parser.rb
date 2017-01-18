@@ -30,7 +30,7 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-league = "ITALY: A2 West"
+league = "SLOVENIA: Liga Nova KBM" 
 url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_RESULTS_URL 
 url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_STANDINGS_URL 
 #url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
@@ -322,7 +322,16 @@ next_match_list.each do |key1, value1|
 
     puts "[" + left_outer.to_s + ";" + left_inner.to_s + " - " + right_inner.to_s + ";" + right_outer.to_s + "]" 
     puts "dispersion - [" + result_list[key]["dispersion_coefficient_home"].to_s + " - " + result_list[value]["dispersion_coefficient_guest"].to_s + "]"
-    puts "[" + (av - result_list[key]["dispersion_value_home"]*3/4 - result_list[value]["dispersion_value_guest"]*3/4).to_s + " - " + (av + result_list[key]["dispersion_value_home"]*3/4 + result_list[value]["dispersion_value_guest"]*3/4).to_s + "]"
+
+    calculated_range_left2 = av - result_list[key]["dispersion_value_home"] - result_list[value]["dispersion_value_guest"]
+    calculated_range_left2 = calculated_range_left2.round(2)
+    calculated_range_left1 = av - result_list[key]["dispersion_value_home"]*3/4 - result_list[value]["dispersion_value_guest"]*3/4
+    calculated_range_left1 = calculated_range_left1.round(2)
+    calculated_range_right1 = av + result_list[key]["dispersion_value_home"]*3/4 + result_list[value]["dispersion_value_guest"]*3/4
+    calculated_range_right1 = calculated_range_right1.round(2)
+    calculated_range_right2 = av + result_list[key]["dispersion_value_home"] + result_list[value]["dispersion_value_guest"]
+    calculated_range_right2 = calculated_range_right2.round(2)    
+    puts "[" + calculated_range_left2.to_s + ";" + calculated_range_left1.to_s + " - " + calculated_range_right1.to_s + ";" + calculated_range_right2.to_s + "]"
 end
 
 driver.quit 
