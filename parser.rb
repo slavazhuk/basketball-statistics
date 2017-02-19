@@ -30,7 +30,7 @@ driver.manage.timeouts.implicit_wait = 60
 #
 # >>> variables 
 # 
-league = "FRANCE: Pro B" 
+league = "GEORGIA: Superleague" 
 url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_RESULTS_URL 
 url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + BASE_STANDINGS_URL 
 #url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[league] + "/" + "standings/?t=GQ712fxF&ts=t8s9cih3"
@@ -318,7 +318,7 @@ next_match_list.each do |key1, value1|
 
     puts "+" + h_scored.to_s + " -" + h_missed.to_s
     puts "-" + g_missed.to_s + " +" + g_scored.to_s
-    puts "[" + scored_missed_min.to_s + " - " + scored_missed_max.to_s + "]"
+    puts "[" + scored_missed_min.to_s + " - " + (h_missed + g_missed).round(2).to_s + " - " + scored_missed_max.to_s + "]"
 
     puts "[" + left_outer.to_s + ";" + left_inner.to_s + " - " + right_inner.to_s + ";" + right_outer.to_s + "]" 
     puts "dispersion - [" + result_list[key]["dispersion_coefficient_home"].to_s + " - " + result_list[value]["dispersion_coefficient_guest"].to_s + "]"

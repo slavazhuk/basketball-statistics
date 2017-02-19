@@ -73,6 +73,7 @@ module Support
 		                 "UKRAINE: FBU Superleague" => "ukraine/fbu-superleague",
 		                 "UNITED KINGDOM: BBL" => "united-kingdom/bbl",
 		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
+		                 "URUGUAY: Liga Capital - Winners stage" => "uruguay/liga-capital",
 		                 "USA: NBA" => "usa/nba"
 		                }	
     BASE_PINNACLE_LEAGUES_LIST = {
