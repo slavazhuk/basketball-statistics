@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "ARGENTINA: Liga A - Second stage"
+	LEAGUE = "BAHRAIN: Premier League - Losers stage"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -60,6 +60,8 @@ module Support
 		                 "PHILIPPINES: Philippine Cup" => "philippines/philippine-cup",
 		                 "QATAR: QBL" => "qatar/qbl",
 		                 "ROMANIA: Divizia A" => "romania/divizia-a",
+		                 "ROMANIA: Divizia A - Losers stage" => "romania/divizia-a", 
+		                 "ROMANIA: Divizia A - Winners stage" => "romania/divizia-a",
 		                 "RUSSIA: Super League" => "russia/super-league",
 		                 "SERBIA: First League" => "serbia/first-league",
 		                 "SPAIN: ACB" => "spain/acb",
@@ -81,7 +83,9 @@ module Support
 		                }
 	BASE_LEAGUES_LIST_ADDITION = {
 		                          "ARGENTINA: Liga A - First stage" => "?t=GQ712fxF&ts=AqREZm0d",
-		                          "ARGENTINA: Liga A - Second stage" => "?t=GQ712fxF&ts=t8s9cih3"
+		                          "ARGENTINA: Liga A - Second stage" => "?t=GQ712fxF&ts=t8s9cih3",
+		                          "ROMANIA: Divizia A - Losers stage" => "?t=rXsYALns&ts=8vZY0Q4I",
+		                          "ROMANIA: Divizia A - Winners stage" => "?t=rXsYALns&ts=EHZU16kC"
                                  }	                	
     BASE_PINNACLE_LEAGUES_LIST = {
     	                          "AUSTRALIA: NBL" => "australia/nbl",
@@ -154,6 +158,8 @@ module Support
 	end 
 
 	def dispersion_coefficient(input_array)
+		return 0 if input_array.size == 0
+		 
 		avg = 0
 		sum = 0
 		array_size = 0
@@ -180,6 +186,8 @@ module Support
 	end
 
 	def dispersion_value(input_array)
+		return 0 if input_array.size == 0
+		
 		avg = 0
 		sum = 0
 		array_size = 0
