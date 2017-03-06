@@ -1,7 +1,10 @@
 module Support 
+	LEAGUE = "ARGENTINA: Liga A - Second stage"
+
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
 	BASE_LEAGUES_LIST = {
+		                 "ARGENTINA: Liga A - First stage" => "argentina/liga-a",
 		                 "ARGENTINA: Liga A - Second stage" => "argentina/liga-a",
 		                 "AUSTRALIA: NBL" => "australia/nbl",
 		                 "AUSTRIA: ABL" => "austria/abl",
@@ -75,7 +78,11 @@ module Support
 		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
 		                 "URUGUAY: Liga Capital - Winners stage" => "uruguay/liga-capital",
 		                 "USA: NBA" => "usa/nba"
-		                }	
+		                }
+	BASE_LEAGUES_LIST_ADDITION = {
+		                          "ARGENTINA: Liga A - First stage" => "?t=GQ712fxF&ts=AqREZm0d",
+		                          "ARGENTINA: Liga A - Second stage" => "?t=GQ712fxF&ts=t8s9cih3"
+                                 }	                	
     BASE_PINNACLE_LEAGUES_LIST = {
     	                          "AUSTRALIA: NBL" => "australia/nbl",
     	                          "UNITED KINDOM: BBL" => "united-kingdom/bbl",
