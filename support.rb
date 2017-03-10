@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "BAHRAIN: Premier League - Losers stage"
+	LEAGUE = "SLOVAKIA: Extraliga"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
