@@ -358,18 +358,24 @@ next_match_list.each do |key1, value1|
     scored_missed_max_last_3 = (scored_missed_max_last_3 + guest_scored_missed_last_3.max) if !guest_scored_missed_last_3.max.nil?
     scored_missed_max_last_3 = scored_missed_max_last_3.round(2)
 
-    puts "\n"
+    puts "\n\n"
     puts key + " - " + value
 	puts "av_scored_5 - " + av_scored_5.to_s + " (av_scored_5_rev - " + av_scored_5_rev.to_s + ")"
     puts "av_scored_3 - " + av_scored_3.to_s + " (av_scored_3_rev - " + av_scored_3_rev.to_s + ")" 
+
+    puts "----------"
 
     puts "+" + home_scored_last_5.to_s + " -" + home_missed_last_5.to_s
     puts "-" + guest_missed_last_5.to_s + " +" + guest_scored_last_5.to_s
     puts "[" + scored_missed_min_last_5.to_s + " - " + (home_missed_last_5 + guest_missed_last_5).round(2).to_s + " - " + scored_missed_max_last_5.to_s + "]"
 
+    puts "----------"
+
     puts "+" + home_scored_last_3.to_s + " -" + home_missed_last_3.to_s
     puts "-" + guest_missed_last_3.to_s + " +" + guest_scored_last_3.to_s
     puts "[" + scored_missed_min_last_3.to_s + " - " + (home_missed_last_3 + guest_missed_last_3).round(2).to_s + " - " + scored_missed_max_last_3.to_s + "]"
+
+    puts "----------"
 
     puts "[" + left_outer.to_s + ";" + left_inner.to_s + " - " + right_inner.to_s + ";" + right_outer.to_s + "]" 
     puts "dispersion - [" + stat[key]["dispersion_coefficient_home"].to_s + " - " + stat[value]["dispersion_coefficient_guest"].to_s + "]"

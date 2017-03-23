@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "SLOVAKIA: Extraliga"
+	LEAGUE = "VENEZUELA: LPB"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -63,6 +63,7 @@ module Support
 		                 "ROMANIA: Divizia A - Losers stage" => "romania/divizia-a", 
 		                 "ROMANIA: Divizia A - Winners stage" => "romania/divizia-a",
 		                 "RUSSIA: Super League" => "russia/super-league",
+		                 "SAUDI ARABIA: Premier League" => "saudi-arabia/premier-league",
 		                 "SERBIA: First League" => "serbia/first-league",
 		                 "SPAIN: ACB" => "spain/acb",
 		                 "SPAIN: LEB Oro" => "spain/leb-oro",
@@ -79,7 +80,8 @@ module Support
 		                 "UNITED KINGDOM: BBL" => "united-kingdom/bbl",
 		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
 		                 "URUGUAY: Liga Capital - Winners stage" => "uruguay/liga-capital",
-		                 "USA: NBA" => "usa/nba"
+		                 "USA: NBA" => "usa/nba",
+		                 "VENEZUELA: LPB" => "venezuela/lpb"
 		                }
 	BASE_LEAGUES_LIST_ADDITION = {
 		                          "ARGENTINA: Liga A - First stage" => "?t=GQ712fxF&ts=AqREZm0d",
