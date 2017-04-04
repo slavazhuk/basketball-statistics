@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "VENEZUELA: LPB"
+	LEAGUE = "NETHERLANDS: DBL"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -18,6 +18,8 @@ module Support
 		                 "CHINA: CBA" => "china/cba",
 		                 "CROATIA: A1 Liga" => "croatia/a1-liga",
 		                 "CZECH REPUBLIC: NBL" => "czech-republic/nbl",
+		                 "CZECH REPUBLIC: NBL - Winners stage" => "czech-republic/nbl",
+		                 "CZECH REPUBLIC: NBL - Losers stage" => "czech-republic/nbl",
 		                 "CYPRUS: Division A" => "cyprus/division-a",
 		                 "DENMARK: Basketligaen" => "denmark/basketligaen", 
 		                 "EUROPE: ABA League" => "europe/aba-league",
@@ -86,6 +88,8 @@ module Support
 	BASE_LEAGUES_LIST_ADDITION = {
 		                          "ARGENTINA: Liga A - First stage" => "?t=GQ712fxF&ts=AqREZm0d",
 		                          "ARGENTINA: Liga A - Second stage" => "?t=GQ712fxF&ts=t8s9cih3",
+		                          "CZECH REPUBLIC: NBL - Winners stage" => "?t=zs7RMNdC&ts=U1k6Re1M",
+		                          "CZECH REPUBLIC: NBL - Losers stage" => "?t=zs7RMNdC&ts=GMqWRFGS",
 		                          "ROMANIA: Divizia A - Losers stage" => "?t=rXsYALns&ts=8vZY0Q4I",
 		                          "ROMANIA: Divizia A - Winners stage" => "?t=rXsYALns&ts=EHZU16kC"
                                  }	                	

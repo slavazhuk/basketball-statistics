@@ -144,6 +144,9 @@ nokogiri_results.each do |game|
 	home_team = game.css(".team-home").text.strip
 	guest_team = game.css(".team-away").text.strip
 
+    next if stat[home_team].nil?
+    next if stat[guest_team].nil?
+
 	score_raw = game.css(".score").text.strip
 	score_raw.gsub!(/&nbsp;/, "")
 	has_extra_time = score_raw.include?("(")
