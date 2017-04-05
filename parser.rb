@@ -363,8 +363,8 @@ next_match_list.each do |key1, value1|
 
     puts "\n\n"
     puts key + " - " + value
-	puts "av_scored_5 - " + av_scored_5.to_s + " (av_scored_5_rev - " + av_scored_5_rev.to_s + ")"
-    puts "av_scored_3 - " + av_scored_3.to_s + " (av_scored_3_rev - " + av_scored_3_rev.to_s + ")" 
+	puts "av_scored_5 - " + av_scored_5.to_s + " (av_scored_5_rev - " + av_scored_5_rev.round(2).to_s + ")"
+    puts "av_scored_3 - " + av_scored_3.to_s + " (av_scored_3_rev - " + av_scored_3_rev.round(2).to_s + ")" 
 
     puts "----------"
 
@@ -380,7 +380,7 @@ next_match_list.each do |key1, value1|
 
     puts "----------"
 
-    puts "[" + left_outer.to_s + ";" + left_inner.to_s + " - " + right_inner.to_s + ";" + right_outer.to_s + "]" 
+    puts "[" + left_outer.to_s + ";" + left_inner.to_s + " - " + right_inner.to_s + ";" + right_outer.to_s + "] tendention" 
     puts "dispersion - [" + stat[key]["dispersion_coefficient_home"].to_s + " - " + stat[value]["dispersion_coefficient_guest"].to_s + "]"
 
     calculated_range_left2 = av_scored_5 - stat[key]["dispersion_value_home"] - stat[value]["dispersion_value_guest"]
@@ -391,7 +391,19 @@ next_match_list.each do |key1, value1|
     calculated_range_right1 = calculated_range_right1.round(2)
     calculated_range_right2 = av_scored_5 + stat[key]["dispersion_value_home"] + stat[value]["dispersion_value_guest"]
     calculated_range_right2 = calculated_range_right2.round(2)    
-    puts "[" + calculated_range_left2.to_s + ";" + calculated_range_left1.to_s + " - " + calculated_range_right1.to_s + ";" + calculated_range_right2.to_s + "]"
+    puts "[" + calculated_range_left2.to_s + ";" + calculated_range_left1.to_s + " - " + calculated_range_right1.to_s + ";" + calculated_range_right2.to_s + "] calculated"
+
+    a1 = []
+    a1 << home_scored_last_5
+    a1 << guest_missed_last_5
+    a1 << home_scored_last_3
+    a1 << guest_missed_last_3
+    a2 = []
+    a2 << home_missed_last_5
+    a2 << guest_scored_last_5
+    a2 << home_missed_last_3
+    a2 << guest_scored_last_3
+    puts "[" + (a1.min*(1-stat[key]["dispersion_coefficient_home"]) + a2.min*(1-stat[value]["dispersion_coefficient_guest"])).round(2).to_s + " - " + (a1.max*(1+stat[key]["dispersion_coefficient_home"]) + a2.max*(1+stat[value]["dispersion_coefficient_guest"])).round(2).to_s + "]"
 end
 
 driver.quit 
