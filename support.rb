@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "NETHERLANDS: DBL"
+	LEAGUE = "POLAND: Tauron Basket Liga"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
