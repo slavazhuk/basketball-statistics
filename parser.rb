@@ -144,8 +144,8 @@ nokogiri_results.each do |game|
 	home_team = game.css(".team-home").text.strip
 	guest_team = game.css(".team-away").text.strip
 
-    next if stat[home_team].nil?
-    next if stat[guest_team].nil?
+    #next if stat[home_team].nil?
+    #next if stat[guest_team].nil?
 
 	score_raw = game.css(".score").text.strip
 	score_raw.gsub!(/&nbsp;/, "")
@@ -157,14 +157,14 @@ nokogiri_results.each do |game|
     home_score = score_raw_processed[0, index_colon - 1].strip.to_i
     guest_score = score_raw_processed[(index_colon+2)..-1].strip.to_i
 
-    stat[home_team]["home_scored"] << home_score
-    stat[home_team]["home_missed"] << guest_score
-    stat[home_team]["full_scored"] << home_score
-    stat[home_team]["full_missed"] << guest_score
-    stat[guest_team]["guest_scored"] << guest_score
-    stat[guest_team]["guest_missed"] << home_score
-    stat[guest_team]["full_scored"] << guest_score
-    stat[guest_team]["full_missed"] << home_score 
+    stat[home_team]["home_scored"] << home_score if !stat[home_team].nil?
+    stat[home_team]["home_missed"] << guest_score if !stat[home_team].nil?
+    stat[home_team]["full_scored"] << home_score if !stat[home_team].nil?
+    stat[home_team]["full_missed"] << guest_score if !stat[home_team].nil?
+    stat[guest_team]["guest_scored"] << guest_score if !stat[guest_team].nil?
+    stat[guest_team]["guest_missed"] << home_score if !stat[guest_team].nil?
+    stat[guest_team]["full_scored"] << guest_score if !stat[guest_team].nil?
+    stat[guest_team]["full_missed"] << home_score if !stat[guest_team].nil? 
 end 
 
 stat.each_key do |key|

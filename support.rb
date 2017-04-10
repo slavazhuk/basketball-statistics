@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "POLAND: Tauron Basket Liga"
+	LEAGUE = "ARGENTINA: Liga A - Second stage"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -14,6 +14,8 @@ module Support
 		                 "BRAZIL: NBB" => "brazil/nbb",
 		                 "BULGARIA: NBL" => "bulgaria/nbl",
 		                 "BOSNIA AND HERZEGOVINA: Prvenstvo BiH" => "bosnia-and-herzegovina/prvenstvo-bih",
+		                 "BOSNIA AND HERZEGOVINA: Prvenstvo BiH - Winners stage" => "bosnia-and-herzegovina/prvenstvo-bih",
+		                 "BOSNIA AND HERZEGOVINA: Prvenstvo BiH - Losers stage" => "bosnia-and-herzegovina/prvenstvo-bih",
 		                 "CHILE: LNB" => "chile/lnb",
 		                 "CHINA: CBA" => "china/cba",
 		                 "CROATIA: A1 Liga" => "croatia/a1-liga",
@@ -34,12 +36,17 @@ module Support
 		                 "FRANCE: Pro B" => "france/pro-b",
 		                 "FINLAND: Korisliiga" => "finland/korisliiga",
 		                 "FYR OF MACEDONIA: Superleague" => "fyr-of-macedonia/superleague",
+		                 "FYR OF MACEDONIA: Superleague - Winners stage" => "fyr-of-macedonia/superleague",
+		                 "FYR OF MACEDONIA: Superleague - Losers stage" => "fyr-of-macedonia/superleague",
 		                 "GEORGIA: Superleague" => "georgia/superleague",
 		                 "GERMANY: BBL" => "germany/bbl",
 		                 "GERMANY: Pro A" => "germany/pro-a",
 		                 "GREECE: Basket League" => "greece/basket-league",
 		                 "GREECE: A2" => "greece/a2",
 		                 "HUNGARY: NB I. A" => "hungary/nb-i-a",
+		                 "HUNGARY: NB I. A - Winners stage" => "hungary/nb-i-a",
+		                 "HUNGARY: NB I. A - Losers stage" => "hungary/nb-i-a",
+		                 "HUNGARY: NB I. A - 6th-10th places" => "hungary/nb-i-a",
 		                 "ITALY: Lega A" => "italy/lega-a",
 		                 "ITALY: A2 West" => "italy/a2-west",
 		                 "ITALY: A2 East" => "italy/a2-east",
@@ -73,8 +80,12 @@ module Support
 		                 "SOUTH KOREA: KBL" => "south-korea/kbl",
 		                 "SLOVAKIA: Extraliga" => "slovakia/extraliga",
 		                 "SLOVENIA: Liga Nova KBM" => "slovenia/liga-nova-kbm",
+		                 "SLOVENIA: Liga Nova KBM - Winners stage" => "slovenia/liga-nova-kbm",
+		                 "SLOVENIA: Liga Nova KBM - Losers stage" => "slovenia/liga-nova-kbm",
 		                 "SWEDEN: Ligan" => "sweden/ligan",
 		                 "SWITZERLAND: LNA" => "switzerland/lna",
+		                 "SWITZERLAND: LNA - Winners stage" => "switzerland/lna",
+		                 "SWITZERLAND: LNA - Losers stage" => "switzerland/lna",
 		                 "TURKEY: Super Ligi" => "turkey/super-ligi",
 		                 "TURKEY: TBL" => "turkey/tbl",
 		                 "TURKEY: TB2L" => "turkey/tb2l",
@@ -88,10 +99,21 @@ module Support
 	BASE_LEAGUES_LIST_ADDITION = {
 		                          "ARGENTINA: Liga A - First stage" => "?t=GQ712fxF&ts=AqREZm0d",
 		                          "ARGENTINA: Liga A - Second stage" => "?t=GQ712fxF&ts=t8s9cih3",
+		                          "BOSNIA AND HERZEGOVINA: Prvenstvo BiH - Winners stage" => "?t=WMJ4XNo5&ts=raMcZOBO",
+		                          "BOSNIA AND HERZEGOVINA: Prvenstvo BiH - Losers stage" => "?t=WMJ4XNo5&ts=2TOAa8lP",
 		                          "CZECH REPUBLIC: NBL - Winners stage" => "?t=zs7RMNdC&ts=U1k6Re1M",
 		                          "CZECH REPUBLIC: NBL - Losers stage" => "?t=zs7RMNdC&ts=GMqWRFGS",
+		                          "FYR OF MACEDONIA: Superleague - Winners stage" => "?t=ns6YeyDk&ts=jRIs1OaD",
+		                          "FYR OF MACEDONIA: Superleague - Losers stage" => "?t=ns6YeyDk&ts=8nVXP7xE",
+		                          "HUNGARY: NB I. A - Winners stage" => "?t=xro5IEhb&ts=M1sQqpPm",
+		                          "HUNGARY: NB I. A - Losers stage" => "?t=xro5IEhb&ts=SvrMpQ9s",
+		                          "HUNGARY: NB I. A - 6th-10th places" => "?t=xro5IEhb&ts=4A4xq4vf",
 		                          "ROMANIA: Divizia A - Losers stage" => "?t=rXsYALns&ts=8vZY0Q4I",
-		                          "ROMANIA: Divizia A - Winners stage" => "?t=rXsYALns&ts=EHZU16kC"
+		                          "ROMANIA: Divizia A - Winners stage" => "?t=rXsYALns&ts=EHZU16kC",
+		                          "SWITZERLAND: LNA - Winners stage" => "?t=MLsMEecf&ts=Y9lDHdUR",
+		                          "SWITZERLAND: LNA - Losers stage" => "?t=MLsMEecf&ts=O0On67Wu",
+		                          "SLOVENIA: Liga Nova KBM - Winners stage" => "?t=08MLH4KM&ts=julRw9wl",
+		                          "SLOVENIA: Liga Nova KBM - Losers stage" => "?t=08MLH4KM&ts=80GwwThf"
                                  }	                	
     BASE_PINNACLE_LEAGUES_LIST = {
     	                          "AUSTRALIA: NBL" => "australia/nbl",
