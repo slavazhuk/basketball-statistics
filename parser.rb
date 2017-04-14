@@ -20,11 +20,10 @@ driver.manage.timeouts.implicit_wait = 60
 url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[LEAGUE] + "/" + BASE_RESULTS_URL 
 url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[LEAGUE] + "/" + BASE_STANDINGS_URL 
 url_standings = url_standings + "/" + BASE_LEAGUES_LIST_ADDITION[LEAGUE] if BASE_LEAGUES_LIST_ADDITION[LEAGUE]
-#url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST["EUROPE: Eurocup - Top 16"] + "/" + "standings/?t=SG9OmZS7&ts=fXdaMJr3"
 
 # list of all teams for this league
 team_list = [] 
-# all finished games
+# statistics per team
 stat = {} 
 # next matches
 next_match_list = {}
