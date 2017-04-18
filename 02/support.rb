@@ -1,9 +1,10 @@
 module Support 
-	LEAGUE = "FRANCE: Pro B"
+	LEAGUE = "ARGENTINA: Liga A"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
 	BASE_LEAGUES_LIST = {
+		                 "ARGENTINA: Liga A" => "argentina/liga-a",
 		                 "ARGENTINA: Liga A - First stage" => "argentina/liga-a",
 		                 "ARGENTINA: Liga A - Second stage" => "argentina/liga-a",
 		                 "AUSTRALIA: NBL" => "australia/nbl",
