@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "ARGENTINA: Liga A"
+	LEAGUE = "PUERTO RICO: BSN"
 
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -68,6 +68,7 @@ module Support
 		                 "POLAND: 1. Liga" => "poland/1-liga",
 		                 "PORTUGAL: LPB" => "portugal/lpb",
 		                 "PHILIPPINES: Philippine Cup" => "philippines/philippine-cup",
+		                 "PUERTO RICO: BSN" => "puerto-rico/bsn",
 		                 "QATAR: QBL" => "qatar/qbl",
 		                 "ROMANIA: Divizia A" => "romania/divizia-a",
 		                 "ROMANIA: Divizia A - Losers stage" => "romania/divizia-a", 
@@ -92,7 +93,7 @@ module Support
 		                 "TURKEY: TB2L" => "turkey/tb2l",
 		                 "UKRAINE: FBU Superleague" => "ukraine/fbu-superleague",
 		                 "UNITED KINGDOM: BBL" => "united-kingdom/bbl",
-		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
+		                 "URUGUAY: Liga Capital" => "uruguay/liga-capital",
 		                 "URUGUAY: Liga Capital - Winners stage" => "uruguay/liga-capital",
 		                 "USA: NBA" => "usa/nba",
 		                 "VENEZUELA: LPB" => "venezuela/lpb"
