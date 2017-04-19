@@ -1,6 +1,6 @@
 module Support 
-	LEAGUE = "PUERTO RICO: BSN"
-
+	LEAGUE = "SLOVENIA: Liga Nova KBM"
+	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
 	BASE_LEAGUES_LIST = {
@@ -10,6 +10,7 @@ module Support
 		                 "AUSTRALIA: NBL" => "australia/nbl",
 		                 "AUSTRIA: ABL" => "austria/abl",
 		                 "AUSTRIA: Zweite Liga" => "austria/zweite-liga",
+		                 "ASIA: ABL" => "asia/abl",
 		                 "BAHRAIN: Premier League" => "bahrain/premier-league",
 		                 "BELGIUM: Scooore League" => "belgium/scooore-league",
 		                 "BRAZIL: NBB" => "brazil/nbb",
@@ -30,6 +31,7 @@ module Support
 		                 "EUROPE: Baltic League" => "europe/baltic-league",
 		                 "EUROPE: BIBL" => "europe/bibl",
 		                 "EUROPE: Champions League" => "europe/champions-league",
+		                 "EUROPE: FIBA Europe Cup" => "europe/fiba-europe-cup",
 		                 "EUROPE: VTB United League" => "europe/vtb-united-league",
 		                 "EUROPE: Eurocup - Top 16" => "europe/eurocup",
 		                 "ESTONIA: Korvpalli Meistriliiga" => "estonia/korvpalli-meistriliiga",
