@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "SLOVENIA: Liga Nova KBM"
+	LEAGUE = "SOUTH KOREA: KBL"
 	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -11,6 +11,7 @@ module Support
 		                 "AUSTRIA: ABL" => "austria/abl",
 		                 "AUSTRIA: Zweite Liga" => "austria/zweite-liga",
 		                 "ASIA: ABL" => "asia/abl",
+		                 "AUSTRALIA: SEABL" => "australia/seabl",
 		                 "BAHRAIN: Premier League" => "bahrain/premier-league",
 		                 "BELGIUM: Scooore League" => "belgium/scooore-league",
 		                 "BRAZIL: NBB" => "brazil/nbb",
