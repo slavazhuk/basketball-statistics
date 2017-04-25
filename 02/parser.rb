@@ -10,7 +10,7 @@ include Support
 # >>> webdriver config 
 #
 driver = Selenium::WebDriver.for :firefox
-driver.manage.timeouts.implicit_wait = 60 
+driver.manage.timeouts.implicit_wait = 120 
 
 
 

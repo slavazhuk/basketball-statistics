@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "SLOVENIA: Liga Nova KBM"
+	LEAGUE = "GEORGIA: Superleague"
 	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -11,6 +11,7 @@ module Support
 		                 "AUSTRIA: ABL" => "austria/abl",
 		                 "AUSTRIA: Zweite Liga" => "austria/zweite-liga",
 		                 "ASIA: ABL" => "asia/abl",
+		                 "AUSTRALIA: SEABL" => "australia/seabl",
 		                 "BAHRAIN: Premier League" => "bahrain/premier-league",
 		                 "BELGIUM: Scooore League" => "belgium/scooore-league",
 		                 "BRAZIL: NBB" => "brazil/nbb",
@@ -66,9 +67,11 @@ module Support
 		                 "MONTENEGRO: Prva A Liga" => "montenegro/prva-a-liga",
 		                 "NORWAY: BLNO" => "norway/blno",
 		                 "NETHERLANDS: DBL" => "netherlands/dbl",
+		                 "NEW ZEALAND: NBL" => "new-zealand/nbl",
 		                 "POLAND: Tauron Basket Liga" => "poland/tauron-basket-liga",
 		                 "POLAND: 1. Liga" => "poland/1-liga",
 		                 "PORTUGAL: LPB" => "portugal/lpb",
+		                 "PHILIPPINES: Commissioners Cup" => "philippines/commissioners-cup",
 		                 "PHILIPPINES: Philippine Cup" => "philippines/philippine-cup",
 		                 "PUERTO RICO: BSN" => "puerto-rico/bsn",
 		                 "QATAR: QBL" => "qatar/qbl",
