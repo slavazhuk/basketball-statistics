@@ -10,7 +10,7 @@ include Support
 # >>> webdriver config 
 #
 driver = Selenium::WebDriver.for :firefox
-driver.manage.timeouts.implicit_wait = 60 
+driver.manage.timeouts.implicit_wait = 120 
 
 
 
@@ -20,13 +20,15 @@ driver.manage.timeouts.implicit_wait = 60
 url_results = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[LEAGUE] + "/" + BASE_RESULTS_URL 
 url_standings = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[LEAGUE] + "/" + BASE_STANDINGS_URL 
 url_standings = url_standings + "/" + BASE_LEAGUES_LIST_ADDITION[LEAGUE] if BASE_LEAGUES_LIST_ADDITION[LEAGUE]
+url_fixtures = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[LEAGUE] + "/" + BASE_FIXTURES_URL
+url_teams = BASE_URL + "/" + BASE_BASKETBALL_URL + "/" + BASE_LEAGUES_LIST[LEAGUE] + "/" + BASE_TEAMS_URL
 
 # list of all teams for this league
 team_list = [] 
 # statistics per team
 stat = {} 
 # next matches
-next_match_list = {}
+next_match_list = []
 
 locator_team_list_table = "table" 
 locator_result_list_table = "table.basketball" 
@@ -41,16 +43,16 @@ locator_result_list_table = "table.basketball"
 ############### 
 
 # open page 
-driver.get url_standings 
-nokogiri_page_standings = Nokogiri::HTML(driver.page_source) 
+driver.get url_teams 
+nokogiri_page_teams = Nokogiri::HTML(driver.page_source) 
 
 # parse list of teams 
-nokogiri_standings = nokogiri_page_standings.css(locator_team_list_table + " " + "tbody")
+nokogiri_teams = nokogiri_page_teams.css(locator_team_list_table + " " + "tbody")
                                             .css("tr") 
 
 # get list of teams 
-nokogiri_standings.each do |tr|
-	team = tr.css(".team_name_span a").text.strip 
+nokogiri_teams.each do |tr|
+	team = tr.css("td a").text.strip 
     team_list << team
 end 
 
@@ -93,43 +95,15 @@ team_list.each do |team|
 		                } 
 end 
 
-#
-# >>> next matches
-#
-nokogiri_standings.each do |tr|
-	next if tr.at_css(".matches-5 a").nil?
-	next_match = tr.at_css(".matches-5 a")["title"]
-
-	next if !next_match.include?("Next match:")
-
-    next_match.gsub!(/\[.+\]/, "")    
-    next_match.strip!	
-
-    match_date = next_match.match(/\d{2}.\d{2}.\d{4}/).to_s
-
-    index_dash        = next_match.index(' - ')
-	index_first_digit = next_match.index(/\d{2}.\d{2}.\d{4}/)     
-
-	first_team  = next_match[0, index_dash]
-	second_team = next_match[index_dash+3, index_first_digit-index_dash-4] 
-	
-	next_match_list[first_team] = second_team
-end 
-
-puts next_match_list
-#
-# <<< next matches
-# 
-
 ###############
 ############### <<< standings processing
 ###############
 
 
 
-#
-# >>> results processing 
-# 
+###############
+############### >>> results processing 
+############### 
 
 # open page 
 driver.get url_results
@@ -196,9 +170,9 @@ stat.each_key do |key|
 end
 
 stat.each_key do |key|
-	puts "\n" + key.to_s 
+    puts key.to_s
 
-    printf("%-10s %s\n", "home_scored", stat[key]["home_scored"])
+	printf("%-10s %s\n", "home_scored", stat[key]["home_scored"])
 	printf("%-10s %s\n", "guest_scored", stat[key]["guest_scored"])
 	printf("%-10s %s\n", "full_scored", stat[key]["full_scored"])
     printf("%-10s %s\n", "home_missed", stat[key]["home_missed"])
@@ -225,20 +199,61 @@ stat.each_key do |key|
     puts "av_guest_missed_all_games" + " " + stat[key]["av_guest_missed_all_games"].to_s  
 
     puts "av_full_missed_last_3" + " " + stat[key]["av_full_missed_last_3"].to_s
-    puts "av_full_missed_last_5" + " " + stat[key]["av_full_missed_last_5"].to_s          
+    puts "av_full_missed_last_5" + " " + stat[key]["av_full_missed_last_5"].to_s 
+
+    puts "\n"       
 end 
-#
-# <<< results processing 
-# 
 
-puts "\n"
+###############
+############### <<< results processing 
+############### 
 
-next_match_list.each do |key1, value1|
-	#
-	key   = key1.gsub(/\\/, "")
-	value = value1.gsub(/\\/, "")
 
-    av_scored_5 = 0
+
+###############
+############### >>> next matches
+###############
+
+#    next_match.gsub!(/\[.+\]/, "")    
+#    next_match.strip! 
+
+# open page 
+driver.get url_fixtures 
+nokogiri_page_fixtures = Nokogiri::HTML(driver.page_source) 
+
+# parse list of next matches 
+nokogiri_fixtures = nokogiri_page_fixtures.css(locator_result_list_table + " " + "tbody")
+                                            .css("tr[id]") 
+
+nokogiri_fixtures.each do |game|
+    home_team = game.css(".team-home").text.strip
+    guest_team = game.css(".team-away").text.strip
+
+    next_match_list << {home_team => guest_team}
+end 
+
+puts "\n\n"
+puts next_match_list 
+
+###############
+############### <<< next matches
+############### 
+
+
+
+puts "\n" 
+
+#next_match_list.each do |key1, value1| 
+next_match_list.each do |array_element| 
+    # 
+
+    key   = array_element.keys[0].gsub(/\\/, "") 
+    value = array_element.values[0].gsub(/\\/, "") 
+
+#    key   = key1.gsub(/\\/, "") 
+#    value = value1.gsub(/\\/, "") 
+
+    av_scored_5 = 0 
     av_scored_5 = (av_scored_5 + stat[key]["av_home_scored_last_5"][0]) if stat[key]["av_home_scored_last_5"].size > 0
     av_scored_5 = (av_scored_5 + stat[value]["av_guest_scored_last_5"][0]) if stat[value]["av_guest_scored_last_5"].size > 0
     av_scored_5 = av_scored_5.round(2)

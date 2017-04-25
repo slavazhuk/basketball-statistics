@@ -1,14 +1,17 @@
 module Support 
-	LEAGUE = "ARGENTINA: Liga A - Second stage"
-
+	LEAGUE = "SOUTH KOREA: KBL"
+	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
 	BASE_LEAGUES_LIST = {
+		                 "ARGENTINA: Liga A" => "argentina/liga-a",
 		                 "ARGENTINA: Liga A - First stage" => "argentina/liga-a",
 		                 "ARGENTINA: Liga A - Second stage" => "argentina/liga-a",
 		                 "AUSTRALIA: NBL" => "australia/nbl",
 		                 "AUSTRIA: ABL" => "austria/abl",
 		                 "AUSTRIA: Zweite Liga" => "austria/zweite-liga",
+		                 "ASIA: ABL" => "asia/abl",
+		                 "AUSTRALIA: SEABL" => "australia/seabl",
 		                 "BAHRAIN: Premier League" => "bahrain/premier-league",
 		                 "BELGIUM: Scooore League" => "belgium/scooore-league",
 		                 "BRAZIL: NBB" => "brazil/nbb",
@@ -29,6 +32,7 @@ module Support
 		                 "EUROPE: Baltic League" => "europe/baltic-league",
 		                 "EUROPE: BIBL" => "europe/bibl",
 		                 "EUROPE: Champions League" => "europe/champions-league",
+		                 "EUROPE: FIBA Europe Cup" => "europe/fiba-europe-cup",
 		                 "EUROPE: VTB United League" => "europe/vtb-united-league",
 		                 "EUROPE: Eurocup - Top 16" => "europe/eurocup",
 		                 "ESTONIA: Korvpalli Meistriliiga" => "estonia/korvpalli-meistriliiga",
@@ -63,10 +67,13 @@ module Support
 		                 "MONTENEGRO: Prva A Liga" => "montenegro/prva-a-liga",
 		                 "NORWAY: BLNO" => "norway/blno",
 		                 "NETHERLANDS: DBL" => "netherlands/dbl",
+		                 "NEW ZEALAND: NBL" => "new-zealand/nbl",
 		                 "POLAND: Tauron Basket Liga" => "poland/tauron-basket-liga",
 		                 "POLAND: 1. Liga" => "poland/1-liga",
 		                 "PORTUGAL: LPB" => "portugal/lpb",
+		                 "PHILIPPINES: Commissioners Cup" => "philippines/commissioners-cup",
 		                 "PHILIPPINES: Philippine Cup" => "philippines/philippine-cup",
+		                 "PUERTO RICO: BSN" => "puerto-rico/bsn",
 		                 "QATAR: QBL" => "qatar/qbl",
 		                 "ROMANIA: Divizia A" => "romania/divizia-a",
 		                 "ROMANIA: Divizia A - Losers stage" => "romania/divizia-a", 
@@ -91,7 +98,7 @@ module Support
 		                 "TURKEY: TB2L" => "turkey/tb2l",
 		                 "UKRAINE: FBU Superleague" => "ukraine/fbu-superleague",
 		                 "UNITED KINGDOM: BBL" => "united-kingdom/bbl",
-		                 "URUGUAY: Liga Capita" => "uruguay/liga-capital",
+		                 "URUGUAY: Liga Capital" => "uruguay/liga-capital",
 		                 "URUGUAY: Liga Capital - Winners stage" => "uruguay/liga-capital",
 		                 "USA: NBA" => "usa/nba",
 		                 "VENEZUELA: LPB" => "venezuela/lpb"
