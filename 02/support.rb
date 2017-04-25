@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "GEORGIA: Superleague"
+	LEAGUE = "SOUTH KOREA: KBL"
 	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
