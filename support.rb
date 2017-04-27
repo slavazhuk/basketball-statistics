@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "SOUTH KOREA: KBL"
+	LEAGUE = "ICELAND: Premier league"
 	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -51,6 +51,8 @@ module Support
 		                 "HUNGARY: NB I. A - Winners stage" => "hungary/nb-i-a",
 		                 "HUNGARY: NB I. A - Losers stage" => "hungary/nb-i-a",
 		                 "HUNGARY: NB I. A - 6th-10th places" => "hungary/nb-i-a",
+		                 "ICELAND: Premier league" => "iceland/premier-league",
+		                 "INDONESIA: IBL" => "indonesia/ibl",
 		                 "ITALY: Lega A" => "italy/lega-a",
 		                 "ITALY: A2 West" => "italy/a2-west",
 		                 "ITALY: A2 East" => "italy/a2-east",
