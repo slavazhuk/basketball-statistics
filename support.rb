@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "ICELAND: Premier league"
+	LEAGUE = "GERMANY: BBL"
 	
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
@@ -82,6 +82,7 @@ module Support
 		                 "ROMANIA: Divizia A - Winners stage" => "romania/divizia-a",
 		                 "RUSSIA: Super League" => "russia/super-league",
 		                 "SAUDI ARABIA: Premier League" => "saudi-arabia/premier-league",
+		                 "SERBIA: Superleague" => "serbia/superleague",
 		                 "SERBIA: First League" => "serbia/first-league",
 		                 "SPAIN: ACB" => "spain/acb",
 		                 "SPAIN: LEB Oro" => "spain/leb-oro",
