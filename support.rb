@@ -1,6 +1,10 @@
 module Support 
-	LEAGUE = "GERMANY: BBL"
+	LEAGUE = "MEXICO: LNBP"
 	
+	URL_FLASHSCORE = "http://flashscore.com"
+	URL_BASKETBALL = "basketball"
+	URL_TEAMS = "teams"
+
 	BASE_URL = "http://flashscore.com"
 	BASE_BASKETBALL_URL = "basketball"
 	BASE_LEAGUES_LIST = {
@@ -58,9 +62,9 @@ module Support
 		                 "ITALY: A2 East" => "italy/a2-east",
 		                 "ISRAEL: Super League" => "israel/super-league",
 		                 "IRELAND: SuperLeague" => "ireland/superleague",
-		                 "ICELAND: Premier league" => "iceland/premier-league",
 		                 "JAPAN: B.League" => "japan/b-league",
 		                 "KAZAKHSTAN: National League" => "kazakhstan/national-league",
+		                 "KAZAKHSTAN: Premier League" => "kazakhstan/premier-league",
 		                 "KOSOVO: Superliga" => "kosovo/superliga",
 		                 "LATVIA: LBL" => "latvia/lbl",
 		                 "LITHUANIA: LKL" => "lithuania/lkl",
@@ -151,6 +155,7 @@ module Support
 	BASE_STANDINGS_URL = "standings"
 	BASE_TEAMS_URL = "teams"
 	BASE_ARCHIVE_URL = "archive" 
+	URL_RESULTS = "results"
 
 #
 # >>> functions

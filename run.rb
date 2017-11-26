@@ -1,6 +1,6 @@
-$LOAD_PATH << '.'
+#$LOAD_PATH << '.' 
 
-require "support"
+require_relative "support"
 
 include Support
 
