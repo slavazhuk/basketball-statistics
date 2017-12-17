@@ -1,5 +1,5 @@
 module Support 
-	LEAGUE = "MEXICO: LNBP"
+	LEAGUE = "ROMANIA: Divizia A"
 	
 	URL_FLASHSCORE = "http://flashscore.com"
 	URL_BASKETBALL = "basketball"
@@ -16,8 +16,10 @@ module Support
 		                 "AUSTRIA: Zweite Liga" => "austria/zweite-liga",
 		                 "ASIA: ABL" => "asia/abl",
 		                 "AUSTRALIA: SEABL" => "australia/seabl",
+		                 "BELGIUM: EuroMillions Basketball League" => "belgium/euromillions-basketball-league",
 		                 "BAHRAIN: Premier League" => "bahrain/premier-league",
 		                 "BELGIUM: Scooore League" => "belgium/scooore-league",
+		                 "BELARUS: Premier League" => "belarus/premier-league",
 		                 "BRAZIL: NBB" => "brazil/nbb",
 		                 "BULGARIA: NBL" => "bulgaria/nbl",
 		                 "BOSNIA AND HERZEGOVINA: Prvenstvo BiH" => "bosnia-and-herzegovina/prvenstvo-bih",
@@ -85,6 +87,7 @@ module Support
 		                 "ROMANIA: Divizia A - Losers stage" => "romania/divizia-a", 
 		                 "ROMANIA: Divizia A - Winners stage" => "romania/divizia-a",
 		                 "RUSSIA: Super League" => "russia/super-league",
+		                 "RUSSIA: VTB United League" => "russia/vtb-united-league",
 		                 "SAUDI ARABIA: Premier League" => "saudi-arabia/premier-league",
 		                 "SERBIA: Superleague" => "serbia/superleague",
 		                 "SERBIA: First League" => "serbia/first-league",

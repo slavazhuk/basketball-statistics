@@ -9,16 +9,16 @@ module HelperStatistics
   	 	  "guest_scored" => [],
   		  "full_scored" => [],
 
-		    "av_home_scored_last_3" => [],
-		    "av_home_scored_last_5" => [],
+		    "av_home_scored_L_3" => [],
+		    "av_home_scored_L_5" => [],
 		    "av_home_scored_all_games" => 0,
 
-		    "av_guest_scored_last_3" => [],
-		    "av_guest_scored_last_5" => [],
+		    "av_guest_scored_L_3" => [],
+		    "av_guest_scored_L_5" => [],
 		    "av_guest_scored_all_games" => 0,
 
-		    "av_full_scored_last_3" => [],
-		    "av_full_scored_last_5" => [], 
+		    "av_full_scored_L_3" => [],
+		    "av_full_scored_L_5" => [], 
     	  "av_full_scored_all_games" => [],
 
 		    "dispersion_coefficient_home" => 0,
@@ -30,16 +30,16 @@ module HelperStatistics
     	  "guest_missed" => [],
     	  "full_missed" => [],
 
-    	  "av_home_missed_last_3" => [],
-    	  "av_home_missed_last_5" => [],
+    	  "av_home_missed_L_3" => [],
+    	  "av_home_missed_L_5" => [],
     	  "av_home_missed_all_games" => 0,
 
-    	  "av_guest_missed_last_3" => [],
-    	  "av_guest_missed_last_5" => [],
+    	  "av_guest_missed_L_3" => [],
+    	  "av_guest_missed_L_5" => [],
     	  "av_guest_missed_all_games" => 0,
 
-    	  "av_full_missed_last_3" => [],
-    	  "av_full_missed_last_5" => [],
+    	  "av_full_missed_L_3" => [],
+    	  "av_full_missed_L_5" => [],
     	  "av_full_missed_all_games" => []                         
   	  } 
 	  end   	
@@ -89,16 +89,16 @@ module HelperStatistics
 
   def update_stat_per_each_team_based_on_calculated_values(stat)
     stat.each_key do |key|
-      stat[key]["av_home_scored_last_3"] = last_3(Array.new(stat[key]["home_scored"])) 
-      stat[key]["av_home_scored_last_5"] = last_5(Array.new(stat[key]["home_scored"]))    
+      stat[key]["av_home_scored_L_3"] = last_3(Array.new(stat[key]["home_scored"])) 
+      stat[key]["av_home_scored_L_5"] = last_5(Array.new(stat[key]["home_scored"]))    
       stat[key]["av_home_scored_all_games"] = (stat[key]["home_scored"].reduce(:+) / stat[key]["home_scored"].size.to_f).round(2) if stat[key]["home_scored"].size > 0
 
-      stat[key]["av_guest_scored_last_3"] = last_3(Array.new(stat[key]["guest_scored"]))
-      stat[key]["av_guest_scored_last_5"] = last_5(Array.new(stat[key]["guest_scored"]))            
+      stat[key]["av_guest_scored_L_3"] = last_3(Array.new(stat[key]["guest_scored"]))
+      stat[key]["av_guest_scored_L_5"] = last_5(Array.new(stat[key]["guest_scored"]))            
       stat[key]["av_guest_scored_all_games"] = (stat[key]["guest_scored"].reduce(:+) / stat[key]["guest_scored"].size.to_f).round(2) if stat[key]["guest_scored"].size > 0
 
-      stat[key]["av_full_scored_last_3"] = last_3(Array.new(stat[key]["full_scored"]))
-      stat[key]["av_full_scored_last_5"] = last_5(Array.new(stat[key]["full_scored"]))
+      stat[key]["av_full_scored_L_3"] = last_3(Array.new(stat[key]["full_scored"]))
+      stat[key]["av_full_scored_L_5"] = last_5(Array.new(stat[key]["full_scored"]))
       stat[key]["av_full_scored_all_games"] = (stat[key]["full_scored"].reduce(:+) / stat[key]["full_scored"].size.to_f).round(2) if stat[key]["full_scored"].size > 0
 
       stat[key]["dispersion_coefficient_home"] = dispersion_coefficient(Array.new(stat[key]["home_scored"]))
@@ -106,16 +106,16 @@ module HelperStatistics
       stat[key]["dispersion_coefficient_guest"] = dispersion_coefficient(Array.new(stat[key]["guest_scored"]))
       stat[key]["dispersion_value_guest"] = dispersion_value(Array.new(stat[key]["guest_scored"])) 
 
-      stat[key]["av_home_missed_last_3"] = last_3(Array.new(stat[key]["home_missed"]))
-      stat[key]["av_home_missed_last_5"] = last_5(Array.new(stat[key]["home_missed"]))
+      stat[key]["av_home_missed_L_3"] = last_3(Array.new(stat[key]["home_missed"]))
+      stat[key]["av_home_missed_L_5"] = last_5(Array.new(stat[key]["home_missed"]))
       stat[key]["av_home_missed_all_games"] = (stat[key]["home_missed"].reduce(:+) / stat[key]["home_missed"].size.to_f).round(2) if stat[key]["home_missed"].size > 0
     
-      stat[key]["av_guest_missed_last_3"] = last_3(Array.new(stat[key]["guest_missed"]))
-      stat[key]["av_guest_missed_last_5"] = last_5(Array.new(stat[key]["guest_missed"]))
+      stat[key]["av_guest_missed_L_3"] = last_3(Array.new(stat[key]["guest_missed"]))
+      stat[key]["av_guest_missed_L_5"] = last_5(Array.new(stat[key]["guest_missed"]))
       stat[key]["av_guest_missed_all_games"] = (stat[key]["guest_missed"].reduce(:+) / stat[key]["guest_missed"].size.to_f).round(2) if stat[key]["guest_missed"].size > 0
 
-      stat[key]["av_full_missed_last_3"] = last_3(Array.new(stat[key]["full_missed"]))
-      stat[key]["av_full_missed_last_5"] = last_5(Array.new(stat[key]["full_missed"]))
+      stat[key]["av_full_missed_L_3"] = last_3(Array.new(stat[key]["full_missed"]))
+      stat[key]["av_full_missed_L_5"] = last_5(Array.new(stat[key]["full_missed"]))
       stat[key]["av_full_missed_all_games"] = (stat[key]["full_missed"].reduce(:+) / stat[key]["full_missed"].size.to_f).round(2) if stat[key]["full_missed"].size > 0
     end
 

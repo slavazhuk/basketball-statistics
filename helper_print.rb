@@ -10,27 +10,27 @@ module HelperPrint
       printf("%-10s %s\n", "guest_missed", stat[key]["guest_missed"]) 
       printf("%-10s %s\n", "full_missed", stat[key]["full_missed"])   
 	
-	    puts "av_home_scored_last_3" + " " + stat[key]["av_home_scored_last_3"].to_s	
-      puts "av_home_scored_last_5" + " " + stat[key]["av_home_scored_last_5"].to_s
+	    puts "av_home_scored_L_3" + " " + stat[key]["av_home_scored_L_3"].to_s	
+      puts "av_home_scored_L_5" + " " + stat[key]["av_home_scored_L_5"].to_s
 	    puts "av_home_scored_all_games" + " " + stat[key]["av_home_scored_all_games"].to_s
 
-	    puts "av_guest_scored_last_3" + " " + stat[key]["av_guest_scored_last_3"].to_s
-      puts "av_guest_scored_last_5" + " " + stat[key]["av_guest_scored_last_5"].to_s
+	    puts "av_guest_scored_L_3" + " " + stat[key]["av_guest_scored_L_3"].to_s
+      puts "av_guest_scored_L_5" + " " + stat[key]["av_guest_scored_L_5"].to_s
 	    puts "av_guest_scored_all_games" + " " + stat[key]["av_guest_scored_all_games"].to_s
 
-      puts "av_full_scored_last_3" + " " + stat[key]["av_full_scored_last_3"].to_s
-      puts "av_full_scored_last_5" + " " + stat[key]["av_full_scored_last_5"].to_s 
+      puts "av_full_scored_L_3" + " " + stat[key]["av_full_scored_L_3"].to_s
+      puts "av_full_scored_L_5" + " " + stat[key]["av_full_scored_L_5"].to_s 
 
-      puts "av_home_missed_last_3" + " " + stat[key]["av_home_missed_last_3"].to_s
-      puts "av_home_missed_last_5" + " " + stat[key]["av_home_missed_last_5"].to_s 
+      puts "av_home_missed_L_3" + " " + stat[key]["av_home_missed_L_3"].to_s
+      puts "av_home_missed_L_5" + " " + stat[key]["av_home_missed_L_5"].to_s 
       puts "av_home_missed_all_games" + " " + stat[key]["av_home_missed_all_games"].to_s
 
-      puts "av_guest_missed_last_3" + " " + stat[key]["av_guest_missed_last_3"].to_s 
-      puts "av_guest_missed_last_5" + " " + stat[key]["av_guest_missed_last_5"].to_s
+      puts "av_guest_missed_L_3" + " " + stat[key]["av_guest_missed_L_3"].to_s 
+      puts "av_guest_missed_L_5" + " " + stat[key]["av_guest_missed_L_5"].to_s
       puts "av_guest_missed_all_games" + " " + stat[key]["av_guest_missed_all_games"].to_s  
 
-      puts "av_full_missed_last_3" + " " + stat[key]["av_full_missed_last_3"].to_s
-      puts "av_full_missed_last_5" + " " + stat[key]["av_full_missed_last_5"].to_s 
+      puts "av_full_missed_L_3" + " " + stat[key]["av_full_missed_L_3"].to_s
+      puts "av_full_missed_L_5" + " " + stat[key]["av_full_missed_L_5"].to_s 
 
       puts "\n"       
     end 
